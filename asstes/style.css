@@ -382,12 +382,10 @@
         .gray-container{
             display: flex;
             align-items: center;
-        }
-        .gray-container{
-           
             filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
+            padding: 35px 0 20px 0;
         }
         .secound-wrapper{
             display: flex;
@@ -424,11 +422,9 @@
         .secound-container-info .secound-container-info-a .fa-angle-right{
             color: black;
         }
-        .clean-theme{
-            margin-top: 15px;
-        }
+        
         .clean-theme, .resposive-design, .full-psd, .coding{
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         } 
         
         /* Secound Gray Container Css Start Here */
@@ -609,7 +605,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding-top: 20px;
+            padding-top: 0px;
         }
         .explore{
             flex-basis: 10%;
@@ -898,7 +894,7 @@
 
         /* Footer Media Quries Start Here */
         .footer-wrapper {
-            padding: 20px;
+            padding: 0px 10px;
         }
         .footer-about-p{
             width: 265px;
@@ -917,7 +913,7 @@
             flex-basis: 15%;
         }
         .social-link{
-            flex-basis: 10%;
+            flex-basis: 15%;
         }
         /* Footer Media Quries End Here */
     }
