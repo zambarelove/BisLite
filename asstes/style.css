@@ -157,9 +157,6 @@
             border-radius: 50px;
             position: absolute;
         }
-        .slide-one img:hover .slide-hover-info{
-            display: flex;
-        }
         /* Secound Slider css Start Here  */
 
         .brand-line-one{
@@ -504,10 +501,10 @@
             flex-basis: 50%;
         }
         .contact{
-            flex-basis: 50%;
+            flex-basis: 100%;
         }
         .social-link{
-            flex-basis:100%;
+            flex-basis: 100%;
         }
         .footer-logo{
             margin-bottom: 6px;
@@ -608,6 +605,15 @@
             padding-top: 0px;
         }
         .explore{
+            flex-basis: 30%;
+        }
+        .browse{
+            flex-basis: 30%;
+        }
+        .contact{
+            flex-basis: 30%;
+        }
+        .social-link{
             flex-basis: 10%;
         }
         /* Footer Media Quries End Here */
