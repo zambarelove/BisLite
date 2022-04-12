@@ -160,8 +160,8 @@
 
                 <!-- secound slider start here -->
                     <div class="secound-slider-wrpper responsive-2">
-                        <div class="slide-one ">
-                            <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" class="slide-img" />
+                        <div class="slide-one slide">
+                            <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" id="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
                                     <img src="./asstes/images/leates-news-img/hover-icon-1.png" alt="previes icon" />
@@ -171,8 +171,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-two">
-                            <img src="./asstes/images/leates-news-img/lemon.png" alt="Notepad Image" />
+                        <div class="slide-two slide">
+                            <img src="./asstes/images/leates-news-img/lemon.png" alt="Notepad Image" id="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
                                     <img src="./asstes/images/leates-news-img/hover-icon-1.png" alt="previes icon" />
@@ -182,8 +182,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-three">
-                            <img src="./asstes/images/leates-news-img/shape.png" alt="Notepad Image" />
+                        <div class="slide-three slide">
+                            <img src="./asstes/images/leates-news-img/shape.png" alt="Notepad Image" id="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
                                     <img src="./asstes/images/leates-news-img/hover-icon-1.png" alt="previes icon" />
@@ -193,8 +193,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-four">
-                            <img src="./asstes/images/leates-news-img/last.png" alt="Notepad Image" />
+                        <div class="slide-four slide">
+                            <img src="./asstes/images/leates-news-img/last.png" alt="Notepad Image" id="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
                                     <img src="./asstes/images/leates-news-img/hover-icon-1.png" alt="previes icon" />
@@ -205,7 +205,7 @@
                             </div>
                         </div>
                         <div class="slide-one">
-                            <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" />
+                            <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" id="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
                                     <img src="./asstes/images/leates-news-img/hover-icon-1.png" alt="previes icon" />
@@ -216,7 +216,7 @@
                             </div>
                         </div>
                         <div class="slide-two">
-                            <img src="./asstes/images/leates-news-img/lemon.png" alt="Notepad Image" />
+                            <img src="./asstes/images/leates-news-img/lemon.png" alt="Notepad Image"  id="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
                                     <img src="./asstes/images/leates-news-img/hover-icon-1.png" alt="previes icon" />
@@ -225,7 +225,7 @@
                                     <img src="./asstes/images/leates-news-img/hover-icon-2.png" alt="link icon" />
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 <!-- secound slider start here -->
 
@@ -347,7 +347,7 @@
                     </div>
                     <div class="social-link">
                         <div class="footer-section-header">
-                            <h3 class="footer-section-heading">contact with us</h3>
+                            <h3 class="footer-section-heading social-link-heading">contact with us</h3>
                         </div>
                         <div class="footer-section-content">
                             <div class="footer-social-link-wrapper">
@@ -473,6 +473,15 @@
                 arrows:true,
                 responsive: [
                     {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                    },
+                    {
                     breakpoint: 1280,
                     settings: {
                         slidesToShow: 4,
@@ -502,7 +511,7 @@
                     {
                     breakpoint: 768,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true,
                         dots: false

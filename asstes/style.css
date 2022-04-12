@@ -101,11 +101,8 @@
             font-weight: 700;
             font-family: Lato;
         }
-       
     /* Header Css Start Here */
-    /* Secound container Css Here */
-        
-    /* Secound container Css Here */
+
     /* Fourth White Container Css Start Here */
         .leatest-work{
             display: flex;
@@ -156,6 +153,28 @@
             padding: 5px;
             border-radius: 50px;
             position: absolute;
+        }
+        #slider-img {
+            width: 100%;
+            cursor: pointer;
+        }
+        .slide{
+            position: relative;
+        }
+        .slide-hover-info{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #2AACC8;
+            position: absolute;
+            top: 50%;
+            left:0 ;
+            display: none;
+        }
+        .slide:hover .slide-hover-info{
+            display: flex;
         }
         /* Secound Slider css Start Here  */
 
@@ -258,7 +277,8 @@
         }
         .footer-section-heading{
             font-weight: 600;
-            font-size: 15;
+            font-size: 15px;
+            font-family: Arial;
         }
         .footer-about-p{
             font-size: 15px;
@@ -292,12 +312,15 @@
         .footer-call-fax-div a:hover{
             color: #29ABC7;
         }
+        .social-link-heading{
+            margin-left: 5px;
+        }
         .footer-social-link-a i{
             font-size: 45px;
         }
         .footer-social-link-a{
             font-size: 15px;
-            padding: 5px;
+            padding: 5px 0px;
         }
         .footer-social-link-a .fa-facebook-f, .fa-share-nodes, .fa-skype, .fa-linkedin-in, .fa-pinterest, .fa-dribbble{
             font-size: 20px;
@@ -339,7 +362,7 @@
         }
         .footer-social-link-wrapper{
             display: flex;
-            /* justify-content: space-between; */
+            justify-content: flex-start;
             align-items: center;
         }
         .footer-social-secound-line{
@@ -347,6 +370,7 @@
         }
         .footer-social-link-wrapper > div{
             font-size: 15px;
+            margin-right: 10px;
         }
         .footer-first-line{
             display: flex;
@@ -419,11 +443,9 @@
         .secound-container-info .secound-container-info-a .fa-angle-right{
             color: black;
         }
-        
         .clean-theme, .resposive-design, .full-psd, .coding{
             margin-bottom: 30px;
         } 
-        
         /* Secound Gray Container Css Start Here */
 
         /* Fourth White Container Css Start Here */
@@ -458,21 +480,17 @@
         }
         .brand-line{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: flex-start;
-            flex-wrap: wrap;
         }
         .brand-line img{
-            width: 150px;
+            width: 100%;
         }
         .client{
             margin-top: 25px;
         }
-        .finder-outer, .fujiflim-outer, .boat-outer, .John-outer{
-            margin-top: -6px;
-        }
-        .slide-one > img,  .slide-two > img,  .slide-three > img,  .slide-four > img{
-            width: 100%;
+        .cnn-outer, .finder-outer, .fujiflim-outer, .boat-outer, .John-outer{
+            margin-top: -7px;
         }
         /* Fourth White Container Css End Here */
 
@@ -495,10 +513,10 @@
             margin-top: 25px;
         }
         .explore{
-            flex-basis: 50%;
+            flex-basis: 100%;
         }
         .browse{
-            flex-basis: 50%;
+            flex-basis: 100%;
         }
         .contact{
             flex-basis: 100%;
@@ -514,6 +532,7 @@
             flex-wrap: wrap-reverse;
             justify-content: space-between;
             margin-top: 40px;
+            margin-bottom: 20px;
         }
 
         /* Footer Media Quries End Here */
@@ -574,6 +593,12 @@
         .hero-slide-tittle{
             font-size: 34px;
         }
+        #slider-img{
+            width: 260px;
+        }
+        .slide-hover-info{
+            width: 93.5%;
+        }
         .secound-wrapper{
             flex-direction: row;
             flex-wrap: wrap;
@@ -583,20 +608,25 @@
             width: 245px;
         }
         .boat-outer{
-            margin-top: -5px;
+           margin-top: -6px;
         }
         .finder-outer{
-            margin-top: 0;
-        }
-        .fujiflim-outer, .John-outer{
             margin-top: -6px;
         }
+        .cox-outer{
+            margin-top: 0px;
+        }
+        .cnn-outer{
+            margin-top: 0;
+        }
+        .brand-line{
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
         .brand-line img {
-            width: 185px;
+            width: 277px;
         }
-        .slide-one > img,  .slide-two > img,  .slide-three > img,  .slide-four > img{
-            width: 160px;
-        }
+       
         /* Footer Media Quries Start Here */
         .footer-first-line{
             display: flex;
@@ -604,17 +634,20 @@
             justify-content: space-between;
             padding-top: 0px;
         }
+        .footer-social-link-wrapper > div{
+            margin-right: 20px;
+        }
         .explore{
-            flex-basis: 30%;
+            flex-basis: 15%;
         }
         .browse{
-            flex-basis: 30%;
+            flex-basis: 20%;
         }
         .contact{
-            flex-basis: 30%;
+            flex-basis: 25%;
         }
         .social-link{
-            flex-basis: 10%;
+            flex-basis: 25%;
         }
         /* Footer Media Quries End Here */
     }
@@ -658,6 +691,12 @@
         .flex-item{
             width: 285px;
         }
+        #slider-img{
+            width: 210px;
+        }
+        .slide-hover-info{
+            width: 89.7%;
+        }
         .testimonial-client-wrapper{
             display: flex;
             flex-direction: column;
@@ -666,8 +705,8 @@
         .testimonial-p{
             width: 100%;
         }
-        .slide-one > img,  .slide-two > img,  .slide-three > img,  .slide-four > img{
-            width: 215px;
+        .finder-outer{
+            margin-top: 0px;
         }
         /* blue container media quries start*/
         .blue-container{
@@ -726,9 +765,6 @@
         .flex-item{
             width: 450px;
         }
-        .slide-one > img,  .slide-two > img,  .slide-three > img,  .slide-four > img{
-            width: 200px;
-        }
         .testimonial-p{
             width: 400px;
         }
@@ -736,6 +772,12 @@
             margin-top: 0;
         }
         /* Fourth White Container Start Here */
+        #slider-img{
+            width: 210px;
+        }
+        .slide-hover-info{
+            width: 91.2%;
+        }
         .testimonial-client-wrapper{
             display: flex;
             flex-direction: row;
@@ -747,11 +789,6 @@
         .client{
             margin-top: 0;
             flex-basis: 50%;
-        }
-        .slick-prev:before{
-            position: absolute;
-            top: -100px;
-            left: 700px;
         }
         .brand-line{
             display: flex;
@@ -772,7 +809,7 @@
             margin-top: 0px;
         }
         .John-outer{
-            margin-top: -5px;
+            margin-top: -7px;
         }
         /* Fourth White Container End Here */
 
@@ -864,25 +901,11 @@
             padding-bottom: 34px;
             border-bottom: 1px solid #dfe1e5;
         }
-        .slide-one > img,  .slide-two > img,  .slide-three > img,  .slide-four > img{
+        #slider-img{
             width: 275px;
-            position: relative;
         }
         .slide-hover-info{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 50%;
-            background-color: #29ABC7;
-            display: none;
-        }
-        
-        .slide-img:hover .slide-hover-info, .slide-img:hover .slide-hover-info, .slide-img:hover .slide-img-info, .slide-four:hover .slide-img-info{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            width: 90.2%;
         }
         .testimonial-p{
             width: 441px;
@@ -907,13 +930,13 @@
             color: #363636;
         }
         .about{
-            flex-basis: 7%;
+            flex-basis: 25%;
         }
         .explore{
-            flex-basis: 10%;
+            flex-basis: 15%;
         }
         .browse{
-            flex-basis: 10%;
+            flex-basis: 15%;
         } 
         .contact{
             flex-basis: 15%;
@@ -931,6 +954,9 @@
         }
         .brand-line img{
             width: 210px;
+        }
+        .slide-hover-info{
+            width: 87.5%;
         }
     }
 
