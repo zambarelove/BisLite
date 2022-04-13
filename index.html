@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <title>BisLite</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./asstes/fontawsome/css/all.css">
-    <link rel="stylesheet" href="./asstes/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./asstes/images/favicon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./asstes/fontawsome/css/all.css" />
+    <link rel="stylesheet" href="./asstes/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
@@ -23,9 +24,9 @@
                     <ul class="top-nav-link">
                         <li class="top-nav-link-li"><a href="#">Home</a></li>
                         <li class="top-nav-link-li"><a href="#">About us</a></li>
-                        <li class="dropdown top-nav-link-li">
+                        <li class="dropdown top-nav-link-li dropdown-one-li">
                             <a href="#" >Services <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="dropdown-list">
+                            <ul class="dropdown-list dropdown-list-one">
                                 <li class="dropdown-list-li"><a href="#">Web Design</a></li>
                                 <li class="dropdown-list-li"><a href="#">Wordpress Design</a></li>
                                 <li class="dropdown-list-li"><a href="#">Mobile App Devplopment</a></li>
@@ -53,10 +54,34 @@
         </header>
     <!-- Header Start Here -->
     
-    <!-- Secound Container (first slider) Start Here -->
+    <!-- Secound Container (Hero slider) Start Here -->
         <div class="container-fluid slider-one">
             <div class="container">
-                <div class="responsive">
+                <div class="hero-slider">
+                    <div class="hero-slide">
+                        <div class="hero-slide-img-wrpper">
+                            <img src="./asstes/images/slider-img.png" alt="coffee img" class="hero-slide-img" />
+                            <div class="hero-slide-info">
+                                <h2 class="hero-slide-tittle">We design clean, crisp & memorable icons</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-slide-img-wrpper">
+                            <img src="./asstes/images/slider-img.png" alt="coffee img" class="hero-slide-img" />
+                            <div class="hero-slide-info">
+                                <h2 class="hero-slide-tittle">We design clean, crisp & memorable icons</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-slide-img-wrpper">
+                            <img src="./asstes/images/slider-img.png" alt="coffee img" class="hero-slide-img" />
+                            <div class="hero-slide-info">
+                                <h2 class="hero-slide-tittle">We design clean, crisp & memorable icons</h2>
+                            </div>
+                        </div>
+                    </div>
                     <div class="hero-slide">
                         <div class="hero-slide-img-wrpper">
                             <img src="./asstes/images/slider-img.png" alt="coffee img" class="hero-slide-img" />
@@ -76,7 +101,7 @@
                 </div>
             </div>
         </div>
-    <!-- secound Container (first slider) Start Here -->
+    <!-- secound Container (Hero slider) Start Here -->
 
     <!-- Third Container Start Here -->
         <div class="container-fluid gray-container">
@@ -159,7 +184,7 @@
                 <!-- Latest Work Section End Here -->
 
                 <!-- secound slider start here -->
-                    <div class="secound-slider-wrpper responsive-2">
+                    <div class="secound-slider-wrpper latest-work-slider">
                         <div class="slide-one slide">
                             <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" id="slider-img" />
                             <div class="slide-hover-info">
@@ -421,7 +446,7 @@
 
         <!-- slider one script tag start here -->
             <script>
-                $('.responsive').slick({
+                $('.hero-slider').slick({
                 dots: true,
                 infinite: true,
                 speed: 300,
@@ -463,7 +488,7 @@
 
         <!-- slider two script tag start here -->
             <script>
-                $('.responsive-2').slick({
+                $('.latest-work-slider').slick({
                 dots: false,
                 infinite: true,
                 autoplay:false,
@@ -519,6 +544,15 @@
                     },
                     {
                     breakpoint: 576,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                    },
+                    {
+                    breakpoint: 420,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

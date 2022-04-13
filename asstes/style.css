@@ -69,8 +69,11 @@
         .top-nav-link li a:hover{
             padding: 10px 10px;
             color: #2AACC8;
-            background-color: white;
-            border-top: 2px solid #2AACC8;
+            background-color: rgb(255, 255, 255);
+            border-top: 5px solid #2AACC8;
+        }
+        .fa-angle-down{
+            margin-left: 5px;
         }
         .mobile-icon{
             display: block;
@@ -115,12 +118,12 @@
             padding: 20px 0;
         }
         .section-heading{
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 20px;
+            line-height: 26px;
             color: black;
             font-weight: bold;
             font-family: Arial;
-            padding-left: 5px;
+            padding-left: 15px;
         }
         .white-container{
             background-color: white;
@@ -142,6 +145,7 @@
         }
         .slick-prev:before {
             content: '←';
+            color: black;
             background-color:#25B8F2;
             padding: 5px;
             border-radius: 50px;
@@ -149,6 +153,7 @@
         }
         .slick-next:before {
             content: '›';
+            color: black;
             background-color:#25B8F2;
             padding: 5px;
             border-radius: 50px;
@@ -184,13 +189,18 @@
         .brand-line-one img{
             width: 210px;
         }
-        .responsive-2{ 
+        .latest-work-slider{ 
             overflow: hidden;
         }
         /* Testimonial and Client Section Start Here */
+        .testimonial-client-header{
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+        }
         .testimonial-client-heading{
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 18px;
+            line-height: 26px;
             color: #000000;
             font-weight: bold;
             font-family: Arial;
@@ -199,18 +209,14 @@
         }
         .testimonial-p{
             width: 100%;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 24px;
             color: #363636;
             font-family: Arial;
         }
-        .testimonial-client-header{
-            display: flex;
-            align-items: center;
-            padding: 15px 0;
-        }
+        
         .reviewer{
-            font-size: 14px;
+            font-size: 16px;
             line-height: 24px;
             font-weight: 600;
             font-family: Arial;
@@ -237,11 +243,6 @@
             font-family: Arial;
         }
         .download-btn{
-            padding: 20px 15px;
-            border-radius: 8px;
-            filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
-            background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
-            border: 1px solid #2aacc8;
             font-size: 18px;
             line-height: 20px;
             color: #0d0707;
@@ -249,6 +250,18 @@
             font-family: Arial;
             margin-top: 20px;
             cursor: pointer;
+            padding: 20px 15px;
+            border-radius: 8px;
+            filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
+            background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
+            border: 1px solid #2aacc8;
+        }
+        .download-btn a img{
+            margin-right: 15px;
+        }
+        .download-btn a{
+            display: flex;
+            align-items: center;
         }
         /* Blue Container Css start Here */
         
@@ -256,12 +269,13 @@
 
     /* Footer Css Start Here */
         footer{
+            padding: 40px 0px 0px 0px;
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
         }
         .footer-text{
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 16px;
+            line-height: 21px;
             color: #363636;
             font-weight: 500;
             font-family: Arial;
@@ -277,11 +291,12 @@
         }
         .footer-section-heading{
             font-weight: 600;
-            font-size: 15px;
+            font-size: 16px;
+            line-height: 21px;
             font-family: Arial;
         }
         .footer-about-p{
-            font-size: 15px;
+            font-size: 1px;
             line-height: 20px;
             width: 100%;
             color: #363636;
@@ -300,11 +315,13 @@
             font-family: Arial;
         }
         address h5{
+            font-size: 16px;
+            line-height: 24px;
             color: #363636;
-            font-weight: 00;
+            font-weight: 700;
         }
         .footer-call-fax-div{
-            margin-top: 10px;
+            margin-top: 15px;
         }
         .footer-call-fax-div a{
             color: #363636;
@@ -378,7 +395,9 @@
             justify-content: space-between;
             padding-top: 20px;
         }
-        
+        .fa-angle-right{
+            margin-right: 5px;
+        }
     /* Footer Css End Here */
     
 /* All Section Css End Here */
@@ -406,7 +425,7 @@
             filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
-            padding: 35px 0 20px 0;
+            padding: 45px 0 40px 0;
         }
         .secound-wrapper{
             display: flex;
@@ -419,36 +438,39 @@
             align-items: center;
         }
         .title .title-heading{
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 16px;
+            line-height: 24px;
             color: #000000;
             font-weight: bold;
             font-family: Arial;
-            padding-left: 10px;
+            margin-left: 20px;
         }
         .secound-container-info p{
-            font-size: 13px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 21px;
             color: #363636;
             font-family: Arial;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .secound-container-info .secound-container-info-a{
-            font-size: 13px;
-            line-height: 20px;
+            font-size: 16px;
+            line-height: 24px;
             color: #51B9D0;
-            margin-top: 15px;
+            margin-top: 10px;
             display: inline-block;
         }
         .secound-container-info .secound-container-info-a .fa-angle-right{
             color: black;
         }
-        .clean-theme, .resposive-design, .full-psd, .coding{
-            margin-bottom: 30px;
-        } 
+        .resposive-design, .full-psd, .coding{
+            margin-top: 35px;
+        }  
         /* Secound Gray Container Css Start Here */
 
         /* Fourth White Container Css Start Here */
+        .download-btn img{
+            margin-right: 10px;
+        }
         .brand-line-one{
             display: flex;
             flex-direction: column;
@@ -466,8 +488,13 @@
             padding: 2px;
             border-radius: 50px;
             position: absolute;
-            top: -150px;
+            top: -170px;
             right: 40px;
+        }
+        #slider-img {
+            width: 300px;
+            cursor: pointer;
+            height: 150px;
         }
         .testimonial-client-wrapper{
             display: flex;
@@ -480,21 +507,28 @@
         }
         .brand-line{
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* justify-content: flex-start; */
         }
         .brand-line img{
-            width: 100%;
+            width: 150px;
         }
         .client{
             margin-top: 25px;
         }
-        .cnn-outer, .finder-outer, .fujiflim-outer, .boat-outer, .John-outer{
+        .John-outer, .boat-outer{
+            margin-top: -6px;
+        }
+        .fujiflim-outer, .finder-outer{
             margin-top: -7px;
         }
         /* Fourth White Container Css End Here */
 
         /* Footer Media Quries Start Here */
+        footer{
+            padding: 30px 0px 0px 0px;
+        }
         .footer-first-line{
             display: flex;
             flex-direction: row;
@@ -503,14 +537,21 @@
             padding-top: 20px;
         }
         .footer-nav-link-li{
-            margin-top: 15px;
+            margin-top: 10px;
+        }
+        .footer-about-p{
+            font-size: 16px;
+            line-height: 27px;
         }
         .copywrite-p{
             width: 100%;
             margin-top: 10px;
         }
-        .about, .explore, .browse, .contact, .social-link{
-            margin-top: 25px;
+        .social-link-heading {
+            margin-left: 0px;
+        }
+        .explore, .browse, .contact, .social-link{
+            margin-top: 35px;
         }
         .explore{
             flex-basis: 100%;
@@ -532,10 +573,9 @@
             flex-wrap: wrap-reverse;
             justify-content: space-between;
             align-items: center;
-            margin-top: 40px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
-
         /* Footer Media Quries End Here */
     }
     
@@ -568,7 +608,7 @@
             left: 0;
             right: 0;
             box-shadow: 0px 20px px black;
-            border-bottom: 4px solid #29ABC7;
+            border-bottom: 5px solid #29ABC7;
         }
         .dropdown:hover .dropdown-list{
             display: block;
@@ -594,8 +634,10 @@
         .hero-slide-tittle{
             font-size: 34px;
         }
-        #slider-img{
-            width: 260px;
+        #slider-img {
+            width: 250px;
+            cursor: pointer;
+            height: 150px;
         }
         .slide-hover-info{
             width: 93.5%;
@@ -605,8 +647,19 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+        .title .title-heading {
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .secound-container-info p {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .resposive-design{
+            margin-top: 0px;
+        }
         .flex-item{
-            width: 245px;
+            width: 250px;
         }
         .boat-outer{
            margin-top: -6px;
@@ -624,8 +677,11 @@
             flex-direction: row;
             flex-wrap: wrap;
         }
+        .finder-outer{
+            margin-top: 0px;
+        }
         .brand-line img {
-            width: 277px;
+            width: 185px;
         }
        
         /* Footer Media Quries Start Here */
@@ -649,6 +705,9 @@
         }
         .social-link{
             flex-basis: 25%;
+        }
+        .footer-last-line{
+            margin-top: 35px;
         }
         /* Footer Media Quries End Here */
     }
@@ -690,7 +749,7 @@
             justify-content: space-between;
         }
         .flex-item{
-            width: 285px;
+            width: 325px;
         }
         #slider-img{
             width: 210px;
@@ -715,6 +774,7 @@
         }
         .download-btn{
             margin-top: 20px;
+
         }
         .blue-paragraph{
             width: 100%;
@@ -764,7 +824,7 @@
             justify-content: space-between;
         }
         .flex-item{
-            width: 450px;
+            width: 410px;
         }
         .testimonial-p{
             width: 400px;
@@ -815,6 +875,9 @@
         /* Fourth White Container End Here */
 
         /* Footer Css Start Here */
+        .explore, .browse, .contact, .social-link {
+            margin-top: 0px;
+        }
         .footer-about-p{
             width: 225px;
             color: #363636;
@@ -878,19 +941,42 @@
         .brand-line img{
             width: 203px;
         }
+        /* Secound gray container start here */
+        .title .title-heading{
+            font-size: 15px;
+            line-height: 20px;
+        }
+        .secound-container-info p {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .secound-container-info .secound-container-info-a {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .fa-angle-right{
+            font-size: 12px;
+        }
+        .resposive-design, .full-psd, .coding {
+            margin-top: 0px;
+        }
+        /* Secound gray container end here */
         /* Fourth Container Media Quries Start Here */
+        .secound-container-info .secound-container-info-a{
+            margin-top: 15px;
+        }
         .section-heading{
             padding-left: 15px;
         }
         .slick-prev:before {
             position: absolute;
-            top: -150px;
-            left: 1160px;
+            top: -170px;
+            left: 1190px;
         }
         .slick-next:before {
             position: absolute;
-            top: -150px;
-            right: 40px;
+            top: -170px;
+            right: 20px;
         }
         .section-header{
             padding: 18px 0;
@@ -923,12 +1009,11 @@
         /* Fourth Container Media Quries End Here */
 
         /* Footer Media Quries Start Here */
-        .footer-wrapper {
-            padding: 0px 10px;
-        }
+        
         .footer-about-p{
+            font-size: 15px;
+            line-height: 20px;
             width: 265px;
-            color: #363636;
         }
         .about{
             flex-basis: 25%;
