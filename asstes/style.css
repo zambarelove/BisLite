@@ -990,6 +990,7 @@
         }
         #slider-img{
             width: 275px;
+            height: auto;
         }
         .slide-hover-info{
             width: 90.2%;
