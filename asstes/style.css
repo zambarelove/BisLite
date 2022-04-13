@@ -143,26 +143,6 @@
         .leatest-work{
             position: relative;
         }
-        .slick-prev:before {
-            content: '←';
-            color: black;
-            background-color:#25B8F2;
-            padding: 5px;
-            border-radius: 50px;
-            position: absolute;
-        }
-        .slick-next:before {
-            content: '›';
-            color: black;
-            background-color:#25B8F2;
-            padding: 5px;
-            border-radius: 50px;
-            position: absolute;
-        }
-        #slider-img {
-            width: 100%;
-            cursor: pointer;
-        }
         .slide{
             position: relative;
         }
@@ -178,7 +158,7 @@
             left:0 ;
             display: none;
         }
-        .slide:hover .slide-hover-info{
+        .slider-img:hover + .slide-hover-info{
             display: flex;
         }
         /* Secound Slider css Start Here  */
@@ -189,9 +169,7 @@
         .brand-line-one img{
             width: 210px;
         }
-        .latest-work-slider{ 
-            overflow: hidden;
-        }
+       
         /* Testimonial and Client Section Start Here */
         .testimonial-client-header{
             display: flex;
@@ -358,22 +336,22 @@
             background-color: #E73F76;
             padding: 7px 8px;
         }
-        .footer-social-link-a .fa-dribbble{
+        .fa-dribbble{
             background-color: #CA1E25;
             padding: 7px 8px;
         }
-        .footer-social-link-a .fa-linkedin-in{
+        .fa-linkedin-in{
             background-color: #3299CC;
         }
-        .footer-social-link-a .fa-skype{
+        .fa-skype{
             background-color: #25B8F2;
             padding: 7px 8px;
         }
-        .footer-social-link-a .fa-share-nodes{
+        .fa-share-nodes{
             background-color: #21A61B;
             padding: 7px 8px;
         }
-        .footer-social-link-a .fa-facebook-f:hover, .footer-social-link-a .fa-pinterest:hover, .footer-social-link-a .fa-dribbble:hover, .footer-social-link-a .fa-linkedin-in:hover, .footer-social-link-a .fa-skype:hover, .footer-social-link-a .fa-share-nodes:hover{
+        .social-link-icon:hover{
             background-color: #29ABC7;
             box-shadow: 0px 2px 10px rgba(0,0,0,0.7);
         }
@@ -399,14 +377,102 @@
             margin-right: 5px;
         }
     /* Footer Css End Here */
-    .slick-dots li.slick-active button:before {
-        opacity: .75;
-        color: white;
-    }
+        .sidepanel  {
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            height: 100vh;
+            top: -1px;
+            right: -1px;
+            background-color:  #E7EBF1;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 100px;
+            box-shadow: 0px 0px 30px black;
+          }
+          .sidepanel a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            line-height: 38px;
+            font-family: Arial;
+            color: black;
+            display: block;
+            transition: 0.3s;
+            text-transform: uppercase;
+          }
+          .sidepanel a:hover {
+            color: #25B8F2;
+          }
+          .sidepanel .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+          }
+          
+          .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            background-color: transparent;
+          }
 /* All Section Css End Here */
+
+/* =====================  PortFolio Page Css Start Here ==================== */
+    .portfolio-active-link{
+        border-top: 5px solid #25B8F2;
+    }
+    .tab-section-title-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .tab-section-title{
+        font-family: Arial;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 10px;
+    }
+    .tab-link-ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        border-top: 2px solid #dfe1e5;
+        border-bottom: 2px solid #dfe1e5;
+        padding: 5px 10px;
+    }
+    .tab-link-ul li{
+        padding: 5px 10px;
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .active-tab{
+        background-color: #81E4ED;
+    }
+    .tab-link-ul li:hover{
+        background-color: #81E4ED;
+    }
+    .leatest-work-slider{
+        overflow: hidden;
+    }
+/* =====================  PortFolio Page Css ==================== */
+
+
 
 /* All Device Media Quries Start Here */
     @media screen and (min-width:320px){
+        header{
+            padding: 10px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .slider-one {
+            padding-top: 5px;
+        }
         .hero-slide-info{
             width: 120px;
             position: absolute;
@@ -421,14 +487,19 @@
             width: 110px;
             font-size: 18px;   
         }
-        /* Secound Gray Container  Css Start Here */
-        .gray-container{
+        /* Services Container  Css Start Here */
+        .services-container{
             display: flex;
             align-items: center;
             filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
             padding: 45px 0 40px 0;
+        }
+        .slick-dots li button:before{
+            font-family: 'slick';
+            font-size: 32px;
+            line-height: 20px;
         }
         .secound-wrapper{
             display: flex;
@@ -455,20 +526,23 @@
             font-family: Arial;
             margin-top: 5px;
         }
-        .secound-container-info .secound-container-info-a{
+        .read-more{
             font-size: 16px;
             line-height: 24px;
             color: #51B9D0;
             margin-top: 10px;
             display: inline-block;
         }
-        .secound-container-info .secound-container-info-a .fa-angle-right{
+        .fa-angle-right{
             color: black;
+        }
+        .read-more:hover{
+            text-decoration: underline;
         }
         .resposive-design, .full-psd, .coding{
             margin-top: 35px;
         }  
-        /* Secound Gray Container Css Start Here */
+        /* Services Container Css Start Here */
 
         /* Fourth White Container Css Start Here */
         .download-btn img{
@@ -478,23 +552,17 @@
             display: flex;
             flex-direction: column;
         }
-        .slick-prev:before {
+        .slick-prev {
             position: absolute;
-            top: -150px;
-            left: 250px;
-            padding: 2px;
-            z-index: 99;
+            top: -33% !important;
+            left: 75% !important;
         }
-        .slick-next:before {
-            content: '›';
-            background-color:#25B8F2;
-            padding: 2px;
-            border-radius: 50px;
+        .slick-next {
             position: absolute;
-            top: -170px;
-            right: 40px;
+            top: -29% !important;
+            left: 90% !important;
         }
-        #slider-img {
+        .slider-img {
             width: 300px;
             cursor: pointer;
             height: 150px;
@@ -565,8 +633,8 @@
             line-height: 27px;
         }
         .copywrite-p{
-            width: 100%;
             margin-top: 10px;
+            font-size: 12px;
         }
         .social-link-heading {
             margin-left: 0px;
@@ -594,19 +662,23 @@
             flex-wrap: wrap-reverse;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 40px;
             margin-bottom: 20px;
         }
         /* Footer Media Quries End Here */
     }
     
     @media screen and (min-width:576px){
-        .container{
-            width: 100%;
-        }
         header{
+            padding: 20px 0;
             position: relative;
             z-index: 1;
+        }
+        .slider-one{
+            padding-top: 10px;
+        }
+        .container{
+            width: 100%;
         }
         .top-nav-link{
             display: none;
@@ -640,7 +712,7 @@
         }
         .dropdown-list li a{
             font-size: 13px;
-            line-height: 13px;
+            line-height: 18px;
             text-transform: capitalize;
         }
         .dropdown-list li a:hover{
@@ -655,7 +727,15 @@
         .hero-slide-tittle{
             font-size: 34px;
         }
-        #slider-img {
+        .slick-prev {
+            top: -32% !important;
+            left: 87% !important;
+        }
+        .slick-next {
+            top: -28% !important;
+            left: 95% !important;
+        }
+        .slider-img {
             width: 250px;
             cursor: pointer;
             height: 150px;
@@ -752,6 +832,12 @@
     }
 
     @media screen and (min-width:768px){
+        .logo{
+            width: 95px;
+        }
+        .slider-one{
+            padding-top: 15px;
+        }
         .hero-slide-info{
             width: 250px;
             position: absolute;
@@ -778,6 +864,7 @@
         }
         .top-nav-link li a{
             font-size: 13px;
+            line-height: 20px;
         }
         .dropdown-list li{
             margin: 0px 10px;
@@ -790,7 +877,15 @@
         .flex-item{
             width: 325px;
         }
-        #slider-img{
+        .slick-prev {
+            top: -32% !important;
+            left: 91% !important;
+        }
+        .slick-next {
+            top: -28% !important;
+            left: 97% !important;
+        }
+        .slider-img{
             width: 210px;
         }
         .slide-hover-info{
@@ -813,7 +908,6 @@
         }
         .download-btn{
             margin-top: 20px;
-
         }
         .blue-paragraph{
             width: 100%;
@@ -838,6 +932,21 @@
             margin: 10px 0px;
         }
         /* Footer Css End Here */
+
+        /* ======================= Portfolio Page Media Quries Start Here =========================== */
+        .tab-section-title-wrapper{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .tab-section-title{
+            font-size: 15px;
+            line-height: 20px;
+
+        }
+        /* ======================= Portfolio Page Media Quries End Here =========================== */
+
     }
 
     @media screen and (min-width:992px){
@@ -847,6 +956,10 @@
         }
         .top-nav-link-li{
             margin: 0px 10px;
+        }
+        .slick-dots li button:before{
+            font-size: 50px;
+            line-height: 20px;
         }
         .hero-slide-info{
             top:85px;
@@ -871,8 +984,18 @@
         .clean-theme{
             margin-top: 0;
         }
-        /* Fourth White Container Start Here */
-        #slider-img{
+        /* Latest Work Container Start Here */
+        .slick-prev {
+            position: absolute;
+            top: -32% !important;
+            left: 93% !important;
+        }
+        .slick-next {
+            position: absolute;
+            top: -28% !important;
+            left: 98% !important;
+        }
+        .slider-img{
             width: 210px;
         }
         .slide-hover-info{
@@ -911,7 +1034,7 @@
         .John-outer{
             margin-top: -7px;
         }
-        /* Fourth White Container End Here */
+        /* Latest Work Container End Here */
 
         /* Footer Css Start Here */
         .explore, .browse, .contact, .social-link {
@@ -947,6 +1070,9 @@
     }
 
     @media screen and (min-width:1280px){
+        header{
+            padding: 40px 0;
+        }
         .container{
             width: 1240px;
             margin: 0 auto;
@@ -981,6 +1107,16 @@
             width: 203px;
         }
         /* Secound gray container start here */
+        .slick-prev {
+            position: absolute;
+            top: -21% !important;
+            left: 96% !important;
+        }
+        .slick-next {
+            position: absolute;
+            top: -18% !important;
+            left: 99% !important;
+        }
         .title .title-heading{
             font-size: 15px;
             line-height: 20px;
@@ -1007,27 +1143,18 @@
         .section-heading{
             padding-left: 15px;
         }
-        .slick-prev:before {
-            position: absolute;
-            top: -170px;
-            left: 1190px;
-        }
-        .slick-next:before {
-            position: absolute;
-            top: -170px;
-            right: 20px;
-        }
+       
         .section-header{
             padding: 18px 0;
         }
         .secound-slider-wrpper{
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            padding-top: 20px;
             padding-bottom: 34px;
             border-bottom: 1px solid #dfe1e5;
         }
-        #slider-img{
+        .slider-img{
             width: 275px;
             height: auto;
         }
