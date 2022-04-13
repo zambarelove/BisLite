@@ -399,7 +399,10 @@
             margin-right: 5px;
         }
     /* Footer Css End Here */
-    
+    .slick-dots li.slick-active button:before {
+        opacity: .75;
+        color: white;
+    }
 /* All Section Css End Here */
 
 /* All Device Media Quries Start Here */
@@ -512,7 +515,25 @@
             /* justify-content: flex-start; */
         }
         .brand-line img{
-            width: 150px;
+            width: 100%;
+        } 
+        .cox-outer{
+            flex-basis: 50%;
+        }
+        .cnn-outer{
+            flex-basis: 50%;
+        }
+        .finder-outer{
+            flex-basis: 50%;
+        }
+        .John-outer{
+            flex-basis: 50%;
+        }
+        .boat-outer{
+            flex-basis: 50%;
+        }
+        .fujiflim-outer{
+            flex-basis: 50%;
         }
         .client{
             margin-top: 25px;
@@ -680,8 +701,26 @@
         .finder-outer{
             margin-top: 0px;
         }
-        .brand-line img {
+        .brand-line img{
             width: 185px;
+        } 
+        .cox-outer{
+            flex-basis: 25%;
+        }
+        .cnn-outer{
+            flex-basis: 25%;
+        }
+        .finder-outer{
+            flex-basis: 25%;
+        }
+        .John-outer{
+            flex-basis: 25%;
+        }
+        .boat-outer{
+            flex-basis: 25%;
+        }
+        .fujiflim-outer{
+            flex-basis: 25%;
         }
        
         /* Footer Media Quries Start Here */
