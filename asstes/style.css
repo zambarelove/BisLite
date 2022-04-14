@@ -114,15 +114,15 @@
         }
         .sidepanel .closebtn {
             position: absolute;
-            top: 0;
+            top: 25px;
             right: 25px;
-            font-size: 36px;
+            font-size: 52px;
         }    
         .openbtn {
             font-size: 20px;
             cursor: pointer;
             color: black;
-            padding: 10px 15px;
+            padding: 5px 15px;
             border: none;
             background-color: transparent;
         }
@@ -484,12 +484,11 @@
         
 /* All Section Css End Here */
 
-/* =====================  PortFolio Page Css Start Here ==================== */
+/* ==================================================== PortFolio Page Css Start Here ===================================================== */
     /* Header Section Portfolio Page Start Here  */
         .portfolio-active-top-link{
             border-top: 5px solid #25B8F2;
         }
-
     /* Header Section Portfolio Page Start Here  */
 
     .portfolio-active-link{
@@ -508,17 +507,19 @@
     }
     .tab-link-ul{
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         border-top: 2px solid #dfe1e5;
         border-bottom: 2px solid #dfe1e5;
-        padding: 10px 0px;
+        padding: 12px 0px;
     }
     .tab-link-ul li{
-        padding: 5px 20px;
+        padding: 7px 20px;
         font-family: Arial;
         font-size: 14px;
+        line-height: 21px;
         font-weight: 700;
-        margin-right: 10px;
+        margin-right: 30px;
         cursor: pointer;
         color: #000000;
     }
@@ -527,9 +528,6 @@
     }
     .tab-link-ul li:hover{
         background-color: #81E4ED;
-    }
-    .leatest-work-slider{
-        overflow: hidden;
     }
     [data-tab-content]{
         display: none;
@@ -553,10 +551,11 @@
     }
     .tab-img-info-wrapper{
         overflow: hidden;
-        background-color: #21A61B;
     }
     .tab-img-info-wrapper{
         position: relative;
+        height: 200px;
+        margin-bottom: 30px;
     }
     .tab-info{
         width: 100%;
@@ -568,7 +567,7 @@
         transition: all 1s;
     }
     .tab-img-info-wrapper:hover .tab-info{
-        bottom: 5%;
+        bottom: 0%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -579,10 +578,145 @@
     .hover-img{
         cursor: pointer;
     }
-    
-/* =====================  PortFolio Page Css ==================== */
+/* ==================================================== PortFolio Page Css End Here ===================================================== */
 
 
+/* ==================================================== Contact Page Css Start Here ===================================================== */
+    .contact-outer{
+        background-color: white;
+        padding-bottom: 30px;
+    }
+    .contact-header{
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dfe1e5;
+    }
+    .contact-heading{
+        font-size: 16px;
+        line-height: 27px;
+        color: #000000;
+        font-weight: bold;
+        font-family: Arial;
+        margin-left: 10px;
+        text-transform: uppercase;
+    }
+    .contact-body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+    .contact-info{
+        flex-basis: 55%;
+    }
+    .contact-map{
+        flex-basis: 45%;
+    }
+    .thank-you{
+        font-size: 14px;
+        line-height: 21px;
+        font-family: Arial;
+        color: #000000;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+    .feedback{
+        font-size: 14px;
+        line-height: 21px;
+        font-family: Arial;
+        color: #000000;
+    }
+    .mail-us{
+        color: #2AACC8;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+    .contact-address{
+        background-color: #e7fbfd;
+        border: 1px solid #81e4ed;
+        padding: 25px 25px;
+    }
+    .we-here{
+        font-size: 14px;
+        line-height: 21px;
+        font-family: Arial;
+        margin-bottom: 20px;
+    }
+    .map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .address-tittle{
+        font-family: Arial;
+        text-transform: uppercase;
+    }
+    .company-name{
+        font-size: 16px;
+        line-height: 21px;
+        font-family: Arial;
+        margin-top: 15px;
+    }
+    .office{
+        color: #363636;
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .call-fax{
+        margin-top: 20px;
+    }
+    .call, .fax, .number{
+        font-family: Arial;
+        color: #363636;
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .number:hover{
+        color: #25B8F2;
+    }
+    form{
+        margin-top: 30px;
+    }
+    input{
+        font-size: 16px;
+        line-height: 21px;
+        height: 30px;
+        margin: 10px 0;
+    }
+    input:focus, textarea:focus{
+        border: 1px solid #25B8F2;
+    }
+    input, textarea{
+        border: 1px solid black;
+        padding: 5px 10px;
+        width: 70%;
+    }
+    button{
+        width: 160px;
+        height: 60px;
+        border-radius: 8px;
+        filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
+        background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
+        border: 1px solid #2aacc8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 21;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 30px;
+    }
+    button img{
+        margin-right: 10px;
+    }
+/* ==================================================== Contact Page Css End Here ===================================================== */
 
 /* All Device Media Quries Start Here */
     @media screen and (min-width:250px){
@@ -760,6 +894,30 @@
             margin-bottom: 2px;
         }
         /* Footer Media Quries End Here */
+
+        /* PortFolio Page Media Quries Start Here */
+
+        .tab-section-title-wrapper {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .tab-link-ul li {
+            font-size: 12px;
+            line-height: 18px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            /* margin-bottom: 10px; */
+        }
+        .tab-img-info-wrapper {
+            width: 47%;
+            margin-right: 0px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .tab-content-img {
+            width: 100%;
+        }
+        /* Portfolio Page Media Quries End Here */
     }
     
     @media screen and (min-width:576px){
@@ -933,6 +1091,12 @@
             margin-top: 35px;
         }
         /* Footer Media Quries End Here */
+
+        /* Portfolio Page Media Quries Start Here */
+        .tab-img-info-wrapper {
+            width: 30%;
+        }
+        /* Portfolio Page Media Quries Start Here */
     }
 
     @media screen and (min-width:768px){
@@ -1319,12 +1483,41 @@
         }
         /* Footer Media Quries End Here */
 
-        /* =============================== Portfolio Page Media Quries Start Here ============================= */
+        /* =========================================== Portfolio Page Media Quries Start Here ============================================= */
+
+        /* Portfolio Page Media Quries Start Here */
+        .tab-link-ul li{
+            padding: 5px 15px;
+            margin-right: 15px;
+        }
+        .tab-img-info-wrapper {
+            width: 22.8%;
+            height: 200px;
+            margin-bottom: 30px;
+            background-color: #21A61B;
+        }
+        /* Portfolio Page Media Quries Start Here */
         .tab-content-img{
-            width: 275px;
+            width:100%;
+            height: 200px;
             margin-bottom: 20px;
         }
-        /* =============================== Portfolio Page Media Quries Start Here ============================= */
+        /* ========================================== Portfolio Page Media Quries End Here  ============================================== */
+
+
+        /* ========================================== Contact Page Media Quries Start Here  ============================================== */
+
+        .map{
+            width: 341px;
+            height: 280px;
+            border: 5px solid white;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+        /* ========================================== Contact Page Media Quries End Here  ============================================== */
+
     }
 
     @media screen and (min-width:1440px){
