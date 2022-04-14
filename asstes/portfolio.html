@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>BisLite | Portfolio</title>
+    <title>Portfolio | BisLite</title>
+    <link rel="shortcut icon" href="./images/favicon1.png">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,44 +19,62 @@
     <!-- Header Start Here -->
         <header>
             <div class="container top-header">
-                <div class="logo">
-                    <a href="../index.html">
-                        <img src="./images/logo.png" alt="Brush Img" />
-                    </a>
-                </div>
-                <div>
-                    <ul class="top-nav-link">
-                        <li class="top-nav-link-li"><a href="#">Home</a></li>
-                        <li class="top-nav-link-li"><a href="#">About us</a></li>
-                        <li class="dropdown top-nav-link-li dropdown-one-li">
-                            <a href="#" >Services <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="dropdown-list dropdown-list-one">
-                                <li class="dropdown-list-li"><a href="#">Web Design</a></li>
-                                <li class="dropdown-list-li"><a href="#">Wordpress Design</a></li>
-                                <li class="dropdown-list-li"><a href="#">Mobile App Devplopment</a></li>
-                                <li class="dropdown-list-li"><a href="#">Internet Marketing</a></li>
-                                <li class="dropdown-list-li"><a href="#">Social Media Management</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown top-nav-link-li">
-                            <a href="#" class="portfolio-active-link">Portfolio <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="dropdown-list">
-                                <li class="dropdown-list-li"><a href="#">Drop Down 1</a></li>
-                                <li class="dropdown-list-li"><a href="#">Drop Down 2</a></li>
-                                <li class="dropdown-list-li"><a href="#">Drop Down 3</a></li>
-                                <li class="dropdown-list-li"><a href="#">Drop Down 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="top-nav-link-li"><a href="#">Blog</a></li>
-                        <li class="top-nav-link-li"><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="mobile-icon">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+                <!-- Logo Start Here -->
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="/asstes/images/logo.png" alt="Header Logo Image"  class="logo"/>
+                        </a>
+                    </div>
+                <!-- Logo End Here -->
+
+                <!-- Tablate & Desktop View Navgation Menu Start Here -->
+                    <div>
+                        <ul class="top-nav-link">
+                            <li class="top-nav-link-li"><a href="#">Home</a></li>
+                            <li class="top-nav-link-li"><a href="#">About us</a></li>
+                            <li class="dropdown top-nav-link-li dropdown-one-li">
+                                <a href="../asstes/services.html" >Services <i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="dropdown-list dropdown-list-one">
+                                    <li class="dropdown-list-li"><a href="#">Web Design</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Wordpress Design</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Mobile App Devplopment</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Internet Marketing</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Social Media Management</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown top-nav-link-li">
+                                <a href="../asstes/portfolio.html" class="portfolio-active-link">Portfolio <i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 1</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 2</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 3</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="top-nav-link-li"><a href="#">Blog</a></li>
+                            <li class="top-nav-link-li"><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                <!-- Tablate & Desktop View Navgation Menu End Here -->
+
+                <!-- Mobile View Icon Start Here -->
+                    <div class="mobile-icon">
+                        <div id="mySidepanel" class="sidepanel">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                            <a href="#">home</a>
+                            <a href="#">About us</a>
+                            <a href="#">Services</a>
+                            <a href="#">Portfolio</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                        
+                        <button class="openbtn" onclick="openNav()">☰</button>  
+                    </div>
+                <!-- Mobile View Icon Start Here -->
             </div>
         </header>
-    <!-- Header Start Here -->
+    <!-- Header End Here -->
 
     <!-- Tab Section Start Here -->
         <div class="container">
@@ -70,27 +89,152 @@
             <div class="tab-section-wrapper">
                 <div class="tab-section-header">
                     <ul class="tab-link-ul">
-                        <li class="active-tab">
-                            <a href="#">All</a>
-                        </li>
-                        <li>
-                            <a href="#">Website</a>
-                        </li>
-                        <li>
-                            <a href="#">Wordpress</a>
-                        </li>
-                        <li>
-                            <a href="#">Mobile Apps</a>
-                        </li>
-                        <li>
-                            <a href="#">Icons</a>
-                        </li>
-                        <li>
-                            <a href="#">Logos</a>
-                        </li><li>
-                            <a href="#">Graphics</a>
-                        </li>
+                        <li data-tab-target="#all" class="active tab tab-link-li"> All </li>
+                        <li data-tab-target="#website" class="tab-link-li"> Website </li>
+                        <li data-tab-target="#wordpress" class="tab-link-li"> Wordpress </li>
+                        <li data-tab-target="#mobile-app" class="tab-link-li">Mobile Apps</li>
+                        <li data-tab-target="#icons" class="tab-link-li">Icons</li>
+                        <li data-tab-target="#logos" class="tab-link-li">Logos</li>
+                        <li data-tab-target="#graphics" class="tab-link-li">Graphics </li>
                     </ul>
+                    <div class="tab-content">
+                        <div id="all" data-tab-content class="active">
+                            <div class="all-tab-content-wrapper">
+                                <div class="tab-img-info-wrapper">
+                                    <div class="tab-content-img-wrapper">
+                                        <img src="./images/Portfolio-page-img/tabp-img/tab-1.png" alt="Tab One Image"  class="tab-content-img" />
+                                    </div>
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-2.png" alt="Tab Two Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-3.png" alt="Tab Three Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-4.png" alt="Tab Four Image"   class="tab-content-img"/>
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-5.png" alt="Tab Five Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-6.png" alt="Tab Six Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-7.png" alt="Tab Seven Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-8.png" alt="Tab Eight Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-9.png" alt="Tab Nine Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-10.png" alt="Tab Ten Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-11.png" alt="Tab Elevone Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-12.png" alt="Tab Twelve Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-13.png" alt="Tab Thirteen Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-14.png" alt="Tab Fourteen Image"  class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-15.png" alt="Tab Fifteen Image" class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                                <div class="tab-img-info-wrapper">
+                                    <img src="./images/Portfolio-page-img/tabp-img/tab-16.png" alt="Tab sixteen Image" class="tab-content-img" />
+                                    <div class="tab-info">
+                                        <img src="./images/leates-news-img/hover-icon-1.png" alt="Preivew Image" class="hover-img" />
+                                        <img src="./images/leates-news-img/hover-icon-2.png" alt="Preivew Image" class="hover-img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="website" data-tab-content >
+                            <h2>Website</h2>
+                        </div>
+                        <div id="wordpress" data-tab-content>
+                            <h2>Wordpress</h2>
+                        </div>
+                        <div id="mobile-app" data-tab-content>
+                            <h2>Mobile App</h2>
+                        </div>
+                        <div id="icons" data-tab-content>
+                            <h2>IconS</h2>
+                        </div>
+                        <div id="logos" data-tab-content>
+                            <h2>Logog</h2>
+                        </div>
+                        <div id="graphics" data-tab-content>
+                            <h2>Graphics</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,10 +361,9 @@
             <script src="./fontawsome/js/all.js"></script>
         <!-- Fontawsome Script Tag Start Here -->
 
-
-        <!-- Side Nav Script Tag Start Here -->
-           
-        <!-- Side Nav Script Tag End Here -->
+           <!-- External js File Script tag Start Here -->
+           <script src="./js/index.js"></script>
+           <!-- External js File Script tag End Here -->
 
     <!-- All Script Tag and Link Here -->
 </body>
