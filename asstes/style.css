@@ -42,17 +42,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo{
-            font-size: 18px;
-            line-height: 20px;
-            color: #000000;
-            font-weight: 900;
-            font-family: Lato;
-        }
-        .logo span{
-            font-weight: lighter;
-            color: skyblue;
-        }
         .top-nav-link{
             display: none;
             list-style: none;
@@ -75,11 +64,71 @@
         .fa-angle-down{
             margin-left: 5px;
         }
+        .dropdown{
+            position: relative;
+        }
+        .dropdown-list{
+            width: 215px;
+            height: auto;
+            background-color: white;
+            display: none;
+            list-style: none;
+            position: absolute;
+            top: 22px;
+            left: 0;
+            right: 0;
+            box-shadow: 0px 20px px black;
+            border-bottom: 5px solid #29ABC7;
+        }
         .mobile-icon{
             display: block;
             font-size: 20px;
             cursor: pointer;
         }   
+        .sidepanel  {
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            height: 100vh;
+            top: -1px;
+            right: -1px;
+            background-color:  #E7EBF1;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 100px;
+            box-shadow: 0px 0px 30px black;
+        }
+        .sidepanel a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 30px;
+            font-family: Arial;
+            color: black;
+            display: block;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .sidepanel a:hover {
+            color: #25B8F2;
+        }
+        .sidepanel .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }    
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            background-color: transparent;
+        }
+        /* Header Css Start Here */
+
+        /* Hero Section Css Start Here */
         .slider-one{
             display: flex;
             align-items: center;
@@ -104,14 +153,45 @@
             font-weight: 700;
             font-family: Lato;
         }
-    /* Header Css Start Here */
+        /* Hero Section Css Start Here */
 
-    /* Fourth White Container Css Start Here */
+        /*  Container Css Start Here */
+        .title{
+            display: flex;
+            align-items: center;
+        }
+        .title-heading {
+            font-size: 16px;
+            line-height: 21px;
+            font-family: Arial;
+            margin-left: 15px;
+        }
+        .secound-container-info p {
+            font-size: 14px;
+            line-height: 21px;
+            font-family: Arial;
+            color: #000000;
+            margin: 10px 0 15px 0;
+        }
+        .read-more{
+            font-size: 14px;
+            line-height: 21px;
+            font-family: Arial;
+            color: #25B8F2;
+        }
+        .fa-angle-right{
+            color: #000000;
+        }
+        .read-more:hover{
+            text-decoration: underline;
+        }
         .leatest-work{
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #dfe1e5;
+            position: relative;
         }
+        
         .section-header{
             display: flex;
             align-items: center;
@@ -127,7 +207,7 @@
         }
         .white-container{
             background-color: white;
-            padding-bottom: 20px;
+            padding-bottom: 35px;
         }
         .secound-slider-wrpper{
             display: flex;
@@ -139,10 +219,23 @@
         .hero-slide-img-wrpper{
             position: relative;
         }
-        /* Secound Slider css Start Here  */
-        .leatest-work{
-            position: relative;
+        .testimonial-client-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
+        .testimonial-client-header{
+            display: flex;
+            align-items: center;
+        }
+        .brand-line{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        /* Secound Slider css Start Here  */
+       
         .slide{
             position: relative;
         }
@@ -204,7 +297,7 @@
         
         /* Blue Container Css start Here */
         .blue-container{
-            margin-top: 20px;
+            margin-top: 40px;
             background-color: #e8fcfe;
             border: 1px solid #81e4ed;
             display: flex;
@@ -221,14 +314,14 @@
             font-family: Arial;
         }
         .download-btn{
-            font-size: 18px;
-            line-height: 20px;
+            font-size: 16px;
+            line-height: 21px;
             color: #0d0707;
             font-weight: bold;
             font-family: Arial;
             margin-top: 20px;
             cursor: pointer;
-            padding: 20px 15px;
+            padding: 10px 15px;
             border-radius: 8px;
             filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
             background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
@@ -247,16 +340,29 @@
 
     /* Footer Css Start Here */
         footer{
-            padding: 40px 0px 0px 0px;
+            padding: 30px 0px 30px 0px;
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
         }
+        .footer-first-line{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
         .footer-text{
-            font-size: 16px;
+            font-size: 14px;
             line-height: 21px;
             color: #363636;
             font-weight: 500;
             font-family: Arial;
+        }
+        .footer-first-line{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 20px;
         }
         .footer-section-header{
             font-size: 15px;
@@ -345,11 +451,11 @@
         }
         .fa-skype{
             background-color: #25B8F2;
-            padding: 7px 8px;
+            padding: 7px 9px;
         }
         .fa-share-nodes{
             background-color: #21A61B;
-            padding: 7px 8px;
+            padding: 7px 10px;
         }
         .social-link-icon:hover{
             background-color: #29ABC7;
@@ -359,66 +465,23 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-        }
-        .footer-social-secound-line{
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .footer-social-link-wrapper > div{
             font-size: 15px;
             margin-right: 10px;
         }
-        .footer-first-line{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding-top: 20px;
-        }
         .fa-angle-right{
             margin-right: 5px;
         }
+        .footer-last-line{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
     /* Footer Css End Here */
-        .sidepanel  {
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            height: 100vh;
-            top: -1px;
-            right: -1px;
-            background-color:  #E7EBF1;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 100px;
-            box-shadow: 0px 0px 30px black;
-          }
-          .sidepanel a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            line-height: 38px;
-            font-family: Arial;
-            color: black;
-            display: block;
-            transition: 0.3s;
-            text-transform: uppercase;
-          }
-          .sidepanel a:hover {
-            color: #25B8F2;
-          }
-          .sidepanel .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-          }
-          
-          .openbtn {
-            font-size: 20px;
-            cursor: pointer;
-            color: black;
-            padding: 10px 15px;
-            border: none;
-            background-color: transparent;
-          }
+        
 /* All Section Css End Here */
 
 /* =====================  PortFolio Page Css Start Here ==================== */
@@ -464,14 +527,17 @@
 
 
 /* All Device Media Quries Start Here */
-    @media screen and (min-width:320px){
+    @media screen and (min-width:250px){
         header{
-            padding: 10px 0;
+            padding: 5px 0;
             position: relative;
             z-index: 1;
         }
+        .logo{
+            width: 100px;
+        }
         .slider-one {
-            padding-top: 5px;
+            padding-top: 10px;
         }
         .hero-slide-info{
             width: 120px;
@@ -494,7 +560,7 @@
             filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
-            padding: 45px 0 40px 0;
+            padding: 20px 0 40px 0;
         }
         .slick-dots li button:before{
             font-family: 'slick';
@@ -507,46 +573,32 @@
             align-items: center;
             flex-wrap: nowrap;
         }
-        .title{
-            display: flex;
-            align-items: center;
-        }
-        .title .title-heading{
+        .title-heading{
             font-size: 16px;
-            line-height: 24px;
-            color: #000000;
-            font-weight: bold;
-            font-family: Arial;
-            margin-left: 20px;
+            line-height: 21px;
         }
-        .secound-container-info p{
+        .secound-container-info p {
+            margin: 5px 0 10px 0;
             font-size: 14px;
             line-height: 21px;
-            color: #363636;
-            font-family: Arial;
-            margin-top: 5px;
-        }
-        .read-more{
-            font-size: 16px;
-            line-height: 24px;
-            color: #51B9D0;
-            margin-top: 10px;
-            display: inline-block;
-        }
-        .fa-angle-right{
-            color: black;
-        }
-        .read-more:hover{
-            text-decoration: underline;
         }
         .resposive-design, .full-psd, .coding{
             margin-top: 35px;
         }  
         /* Services Container Css Start Here */
 
-        /* Fourth White Container Css Start Here */
-        .download-btn img{
-            margin-right: 10px;
+        /* Latest Container Css Start Here */
+        .section-heading, .testimonial-client-heading, .testimonial-client-heading{
+            font-size: 18px;
+            line-height: 27px;
+        }
+        .testimonial-p {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .reviewer{
+            font-size: 14px;
+            line-height: 21px;   
         }
         .brand-line-one{
             display: flex;
@@ -566,21 +618,6 @@
             width: 300px;
             cursor: pointer;
             height: 150px;
-        }
-        .testimonial-client-wrapper{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .testimonial-client-header{
-            display: flex;
-            align-items: center;
-        }
-        .brand-line{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            /* justify-content: flex-start; */
         }
         .brand-line img{
             width: 100%;
@@ -612,25 +649,26 @@
         .fujiflim-outer, .finder-outer{
             margin-top: -7px;
         }
-        /* Fourth White Container Css End Here */
+        .download-btn img{
+            margin-right: 10px;
+        }
+        .blue-paragraph {
+            font-size: 16px;
+            line-height: 27px;
+        }
+        /* Latest Work Container Css End Here */
 
         /* Footer Media Quries Start Here */
         footer{
-            padding: 30px 0px 0px 0px;
-        }
-        .footer-first-line{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            padding-top: 20px;
+            padding-top: 0px;
+            padding-bottom: 20px;
         }
         .footer-nav-link-li{
             margin-top: 10px;
         }
         .footer-about-p{
-            font-size: 16px;
-            line-height: 27px;
+            font-size: 14px;
+            line-height: 21px;
         }
         .copywrite-p{
             margin-top: 10px;
@@ -640,7 +678,7 @@
             margin-left: 0px;
         }
         .explore, .browse, .contact, .social-link{
-            margin-top: 35px;
+            margin-top: 25px;
         }
         .explore{
             flex-basis: 100%;
@@ -658,22 +696,16 @@
             margin-bottom: 6px;
         }
         .footer-last-line{
-            display: flex;
-            flex-wrap: wrap-reverse;
-            justify-content: space-between;
-            align-items: center;
             margin-top: 40px;
-            margin-bottom: 20px;
+        }
+        address h5{
+            margin-bottom: 2px;
         }
         /* Footer Media Quries End Here */
     }
     
     @media screen and (min-width:576px){
-        header{
-            padding: 20px 0;
-            position: relative;
-            z-index: 1;
-        }
+        /* Herader Media Quries Start Here */
         .slider-one{
             padding-top: 10px;
         }
@@ -713,11 +745,15 @@
         .dropdown-list li a{
             font-size: 13px;
             line-height: 18px;
+            font-family: Arial;
             text-transform: capitalize;
         }
         .dropdown-list li a:hover{
             border: none;
         }
+        /* Header Media Quries End Here */
+
+        /* Hero Container Media Quries Start Here */
         .hero-slide-info{
             width: 200px;
             position: absolute;
@@ -743,12 +779,15 @@
         .slide-hover-info{
             width: 93.5%;
         }
+        /* Hero Container Media Quries End Here */
+
+        /* Services Media Quries Container Start Here */
         .secound-wrapper{
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .title .title-heading {
+        .title-heading {
             font-size: 15px;
             line-height: 20px;
         }
@@ -760,8 +799,11 @@
             margin-top: 0px;
         }
         .flex-item{
-            width: 250px;
+            width: 270px;
         }
+        /* Services Media Quries End Here */
+
+        /* Latest Work Container Media Quries Start Here */
         .boat-outer{
            margin-top: -6px;
         }
@@ -802,8 +844,12 @@
         .fujiflim-outer{
             flex-basis: 25%;
         }
-       
+        /* Latest Work Media Quries End Here */
+
         /* Footer Media Quries Start Here */
+        footer{
+            padding-top: 20px;
+        }
         .footer-first-line{
             display: flex;
             flex-direction: row;
@@ -832,8 +878,8 @@
     }
 
     @media screen and (min-width:768px){
-        .logo{
-            width: 95px;
+        header{
+            padding: 20px 0;
         }
         .slider-one{
             padding-top: 15px;
@@ -857,10 +903,6 @@
         }
         .mobile-icon{
             display: none;
-        }
-        .logo{
-            font-size: 22px;
-            line-height: 20px;
         }
         .top-nav-link li a{
             font-size: 13px;
@@ -922,7 +964,10 @@
 
         /* Footer Css Start Here */
         .about{
-            margin-bottom: 25px;
+            margin-bottom: 5px;
+        }
+        .footer-last-line {
+            margin-top: 25px;
         }
         .copywrite-p{
             font-size: 13px;
@@ -950,6 +995,12 @@
     }
 
     @media screen and (min-width:992px){
+        header{
+            padding: 30px 0;
+        }
+        .logo{
+            width: unset;
+        }
         .container{
             width: 940px;
             margin: 0 auto;
@@ -1028,6 +1079,9 @@
         .blue-paragraph{
             width: 550px;
         }
+        .download-btn{
+            padding: 20px;
+        }
         .finder-outer{
             margin-top: 0px;
         }
@@ -1048,7 +1102,7 @@
             flex-basis: 7%;
         }
         .explore{
-            flex-basis: 15%;
+            flex-basis: 13%;
         }
         .browse{
             flex-basis: 15%;
@@ -1077,11 +1131,12 @@
             width: 1240px;
             margin: 0 auto;
         }
-        .logo{
-            font-size: 50px;
-        }
         .top-nav-link-li{
             margin: 0px 15px;
+        }
+        .top-nav-link li a{
+            font-size: 13px;
+            line-height: 19px;
         }
         .secound-wrapper{
             flex-direction: row;
@@ -1106,6 +1161,10 @@
         .brand-line img{
             width: 203px;
         }
+        .testimonial-p {
+            font-size: 14px;
+            line-height: 24px;
+        }
         /* Secound gray container start here */
         .slick-prev {
             position: absolute;
@@ -1120,6 +1179,7 @@
         .title .title-heading{
             font-size: 15px;
             line-height: 20px;
+
         }
         .secound-container-info p {
             font-size: 13px;
@@ -1136,6 +1196,7 @@
             margin-top: 0px;
         }
         /* Secound gray container end here */
+
         /* Fourth Container Media Quries Start Here */
         .secound-container-info .secound-container-info-a{
             margin-top: 15px;
@@ -1143,7 +1204,6 @@
         .section-heading{
             padding-left: 15px;
         }
-       
         .section-header{
             padding: 18px 0;
         }
@@ -1176,20 +1236,22 @@
         /* Fourth Container Media Quries End Here */
 
         /* Footer Media Quries Start Here */
-        
+        footer{
+            padding-top: 30px;
+        }
         .footer-about-p{
             font-size: 15px;
             line-height: 20px;
             width: 265px;
         }
         .about{
-            flex-basis: 25%;
+            flex-basis: 22%;
         }
         .explore{
-            flex-basis: 15%;
+            flex-basis: 10%;
         }
         .browse{
-            flex-basis: 15%;
+            flex-basis: 10%;
         } 
         .contact{
             flex-basis: 15%;

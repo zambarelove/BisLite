@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="./asstes/slick/slick-theme.css">
     <!-- Slick Slider Link Tag End Here -->
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- External Css Link Tag Start Here  -->
         <link rel="stylesheet" href="./asstes/style.css" />
     <!-- External Css Link Tag End -->
@@ -24,56 +26,64 @@
     <!-- Header Start Here -->
         <header>
             <div class="container top-header">
-                <div class="logo">
-                    <a href="./index.html">
-                        <img src="./asstes/images/logo.png" alt="Header Logo Image" class="logo"/>
-                    </a>
-                </div>
-                <div>
-                    <ul class="top-nav-link">
-                        <li class="top-nav-link-li"><a href="#">Home</a></li>
-                        <li class="top-nav-link-li"><a href="#">About us</a></li>
-                        <li class="dropdown top-nav-link-li dropdown-one-li">
-                            <a href="#" >Services <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="dropdown-list dropdown-list-one">
-                                <li class="dropdown-list-li"><a href="#">Web Design</a></li>
-                                <li class="dropdown-list-li"><a href="#">Wordpress Design</a></li>
-                                <li class="dropdown-list-li"><a href="#">Mobile App Devplopment</a></li>
-                                <li class="dropdown-list-li"><a href="#">Internet Marketing</a></li>
-                                <li class="dropdown-list-li"><a href="#">Social Media Management</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown top-nav-link-li">
-                            <a href="#">Portfolio <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="dropdown-list">
-                                <li class="dropdown-list-li"><a href="#">Drop Down 1</a></li>
-                                <li class="dropdown-list-li"><a href="#">Drop Down 2</a></li>
-                                <li class="dropdown-list-li"><a href="#">Drop Down 3</a></li>
-                                <li class="dropdown-list-li"><a href="#">Drop Down 4</a></li>
-                            </ul>
-                        </li>
-                        <li class="top-nav-link-li"><a href="#">Blog</a></li>
-                        <li class="top-nav-link-li"><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="mobile-icon">
-                    <div id="mySidepanel" class="sidepanel">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <a href="#">home</a>
-                        <a href="#">About us</a>
-                        <a href="#">Services</a>
-                        <a href="#">Portfolio</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Contact Us</a>
-                      </div>
-                      
-                      <button class="openbtn" onclick="openNav()">☰</button>  
-                </div>
+                <!-- Logo Start Here -->
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="./asstes/images/logo.png" alt="Header Logo Image"  class="logo"/>
+                        </a>
+                    </div>
+                <!-- Logo End Here -->
+
+                <!-- Tablate & Desktop View Navgation Menu Start Here -->
+                    <div>
+                        <ul class="top-nav-link">
+                            <li class="top-nav-link-li"><a href="#">Home</a></li>
+                            <li class="top-nav-link-li"><a href="#">About us</a></li>
+                            <li class="dropdown top-nav-link-li dropdown-one-li">
+                                <a href="#" >Services <i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="dropdown-list dropdown-list-one">
+                                    <li class="dropdown-list-li"><a href="#">Web Design</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Wordpress Design</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Mobile App Devplopment</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Internet Marketing</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Social Media Management</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown top-nav-link-li">
+                                <a href="#">Portfolio <i class="fa-solid fa-angle-down"></i></a>
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 1</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 2</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 3</a></li>
+                                    <li class="dropdown-list-li"><a href="#">Drop Down 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="top-nav-link-li"><a href="#">Blog</a></li>
+                            <li class="top-nav-link-li"><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                <!-- Tablate & Desktop View Navgation Menu End Here -->
+
+                <!-- Mobile View Icon Start Here -->
+                    <div class="mobile-icon">
+                        <div id="mySidepanel" class="sidepanel">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                            <a href="#">home</a>
+                            <a href="#">About us</a>
+                            <a href="#">Services</a>
+                            <a href="#">Portfolio</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                        
+                        <button class="openbtn" onclick="openNav()">☰</button>  
+                    </div>
+                <!-- Mobile View Icon Start Here -->
             </div>
         </header>
     <!-- Header End Here -->
     
-    <!-- Hero Section (Hero slider) Start Here -->
+    <!-- Hero Container [Hero slider] Start Here -->
         <div class="container-fluid slider-one">
             <div class="container">
                 <div class="hero-slider">
@@ -120,7 +130,7 @@
                 </div>
             </div>
         </div>
-    <!-- Hero Section (Hero slider) End Here -->
+    <!-- Hero Container [Hero slider] End Here -->
 
     <!-- Services Container Start Here -->
         <div class="container-fluid services-container">
@@ -333,7 +343,7 @@
         </div>
     <!--  Latest work Container End Here -->
 
-    <!-- Footer Start Here -->
+    <!-- Footer Container Start Here -->
         <footer class="container-fluid">
             <div class="container footer-wrapper">
                 <div class="footer-first-line">
@@ -444,20 +454,25 @@
                 </div>
             </div>
         </footer>
-    <!-- Footer End Here -->
+    <!-- Footer Container End Here -->
 
-    <!-- All Js Script Tag and Script link Here -->
+    <!-- All Js Script Tag and Script & link Start Here -->
 
-        <!-- Fontawsome Script Tag Here -->
+        <!-- Fontawsome Script Tag Start Here -->
             <script src="./asstes/fontawsome/js/all.js"></script>
-        <!-- Fontawsome Script Tag Here -->
+        <!-- Fontawsome Script Tag End Here -->
 
-        <!-- Slick Slider "Script src" Tag Here -->
+        <!-- Slick Slider "Script src" Tag Start Here -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-            <script src="./asstes/js/index.js"></script>
-        <!-- Slick Slider "Script src" Tag Here -->
+        <!-- Slick Slider "Script src" Tag End Here -->
 
-    <!-- All Js Script Tag and Script link Here -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- External js File Script tag Start Here -->
+            <script src="./asstes/js/index.js"></script>
+        <!-- External js File Script tag End Here -->
+
+    <!-- All Js Script Tag and Script & link Tag End Here -->
 </body>
 </html>
