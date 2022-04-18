@@ -77,7 +77,6 @@
         }
         .dropdown-list{
             width: 215px;
-            height: auto;
             background-color: white;
             display: none;
             list-style: none;
@@ -91,6 +90,7 @@
         .dropdown-list li:hover{
             border-top: none;
             width: 90%;
+            height: auto;
             transition: all 1s;
         }
         .fa-angle-down{
@@ -1429,11 +1429,9 @@
             width: 940px;
             margin: 0 auto;
         }
-        .top-nav-link-li{
-            margin: 0px 10px;
-            /* padding: 10px 0; */
+        .top-nav-link li{   
+            padding: 10px;
         }
-        
         .slick-dots li button:before{
             font-size: 50px;
             line-height: 20px;
@@ -1583,9 +1581,6 @@
         .container{
             width: 1240px;
             margin: 0 auto;
-        }
-        .top-nav-link-li{
-            margin: 0px 10px;
         }
         .top-nav-link li a{
             font-size: 13px;
