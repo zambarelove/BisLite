@@ -46,23 +46,26 @@
             display: none;
             list-style: none;
         }
+        .top-nav-link li{
+            padding: 10px;
+            position: relative;
+        }
         .top-nav-link li a{
             font-size: 13px;
             line-height: 20px;
             color: #000000;
             font-weight: bold;
             font-family: Arial;
-            padding: 10px 10px;
+            padding: 10px;
             text-transform: uppercase;
         }
-        .top-nav-link li a:hover{
-            padding: 10px 10px;
-            color: #2AACC8;
-            background-color: rgb(255, 255, 255);
+        .top-nav-link li:hover{
+            background-color: white;
+            padding: 10px;
             border-top: 5px solid #2AACC8;
         }
-        .fa-angle-down{
-            margin-left: 5px;
+        .portfolio-active-li{
+            border-top: 5px solid #2AACC8;
         }
         .dropdown{
             position: relative;
@@ -80,6 +83,21 @@
             box-shadow: 0px 20px px black;
             border-bottom: 5px solid #29ABC7;
         }
+        .top-nav-link li a:hover{
+            /* padding: 10px; */
+            color: #2AACC8;
+        }
+        .dropdown-list li:hover{
+            border-top: none;
+            margin-left: 0;
+            width: 90%;
+            margin: 0 auto;
+            transition: all 1s;
+        }
+        .fa-angle-down{
+            margin-left: 5px;
+        }
+        
         .mobile-icon{
             display: block;
             font-size: 20px;
@@ -88,7 +106,7 @@
         .sidepanel{
             width: 0;
             position: fixed;
-            z-index: 1;
+            z-index: 2;
             height: 100vh;
             top: -1px;
             right: -1px;
@@ -126,6 +144,7 @@
             border: none;
             background-color: transparent;
         }
+        
         /* Header Css Start Here */
 
         /* Hero Section Css Start Here */
@@ -488,8 +507,7 @@
         
        
     /* Header Section Portfolio Page Start Here  */
-
-    .portfolio-active-link, .contact-p-active-top-link{
+    .active-li{
         border-top: 5px solid #2AACC8;
     }
     .tab-section-title-wrapper{
@@ -553,7 +571,7 @@
         list-style: none;
         position: relative;
         margin: 10px 0;
-        z-index: 1;
+        z-index: 0;
     }
     .tab-input{
         display: none;
@@ -596,62 +614,6 @@
     .portfolio-input{
         display: none;
     }
-    .wrapper nav .slider{
-        position: absolute;
-        width: 10%;
-        height: 40%;
-        display: inline-block;
-        background-color: #81E4ED;
-        border-radius: 5px;
-        z-index: 0;
-        left: 1%;
-        bottom: 55%;
-        right: 0;
-    }
-    #all:checked ~ nav .slider {
-        width: 10%;
-        height: 40%;
-        left: 1%;
-        top: 7%;
-        transition: all 0.10s;
-    }
-    #website:checked ~ nav .slider {
-        width: 6%;
-        left: 8%;
-        bottom: 15%;
-        transition: all 0.10s;
-    }
-    #wordpress:checked ~ nav .slider {
-        width: 7%;
-        left: 15.7%;
-        bottom: 15%;
-        transition: all 0.10s;
-    }
-    #mobile-app:checked ~ nav .slider {
-        width: 7%;
-        left: 24%;
-        bottom: 16%;
-        transition: all 0.10s;
-    }
-    #icons:checked ~ nav .slider {
-        width: 5%;
-        left: 33%;
-        bottom: 15%;
-        transition: all 0.10s;
-    }
-    #logo:checked ~ nav .slider {
-        width: 5%;
-        left: 41.5%;
-        bottom: 15%;
-        transition: all 0.10s;
-    }
-    #graphic:checked ~ nav .slider {
-        width: 5%;
-        left: 49.5%;
-        bottom: 15%;
-        transition: all 0.3s;
-    }
-    
     #all:checked ~  nav label.all,
     #website:checked ~  nav label.website,
     #wordpress:checked ~  nav label.wordpress,
@@ -660,6 +622,8 @@
     #logo:checked ~  nav label.tab-logo,
     #graphic:checked ~  nav label.graphic{
         color: white;
+        background-color: #81E4ED;
+        transition: all 1s;
     }
     section .content{
         display: none;
@@ -717,7 +681,7 @@
     }
     .pagination li{
         padding: 5px 10px;
-        margin-right: 15px;
+        margin-right: 10px;
         cursor: pointer;
     }
     .active-page{
@@ -775,6 +739,7 @@
     input, textarea{
         border: 1px solid  #b4bac5;
         padding: 5px 10px;
+        font-size: 20px;
     }
     textarea{
         width: 100%;
@@ -883,7 +848,7 @@
     .number:hover{
         color: #25B8F2;
     }
-   
+    
 /* ==================================================== Contact Page Css End Here ===================================================== */
 
 /* All Device Media Quries Start Here */
@@ -966,18 +931,18 @@
         }
         .slick-prev {
             position: absolute;
-            top: -33% !important;
+            top: -20% !important;
             left: 75% !important;
         }
         .slick-next {
             position: absolute;
-            top: -29% !important;
+            top: -17.5% !important;
             left: 90% !important;
         }
         .slider-img {
-            width: 300px;
+            width: 100%;
             cursor: pointer;
-            height: 150px;
+            height: unset;
         }
         .brand-line img{
             width: 100%;
@@ -1074,71 +1039,15 @@
             line-height: 18px;
             padding: 5px 10px;
             margin-right: 5px;
-            /* margin-bottom: 10px; */
         }
         .tab-img-info-wrapper {
-            width: 30%;
+            width: 47%;
             margin-right: 0px;
             height: auto;
             margin-bottom: 15px;
         }
         .tab-content-img {
             width: 100%;
-        }
-        .wrapper nav .slider{
-            position: absolute;
-            width: 12%;
-            height: 40%;
-            display: inline-block;
-            background-color: #81E4ED;
-            border-radius: 5px;
-            z-index: 0;
-            left: 0%;
-            bottom: 50%;
-            right: 0;
-        }
-        #all:checked ~ nav .slider {
-            width: 10%;
-            height: 40%;
-            left: 1%;
-            top: 10%;
-            transition: all 1s;
-        }
-        #website:checked ~ nav .slider {
-            width: 20%;
-            left: 14%;
-            top: 10%;
-            transition: all 1s;
-        }
-        #wordpress:checked ~ nav .slider {
-            width: 25%;
-            left: 38%;
-            top: 10%;
-            transition: all 1s;
-        }
-        #mobile-app:checked ~ nav .slider {
-            width: 30%;
-            left: 65%;
-            top: 10%;
-            transition: all 1s;
-        }
-        #icons:checked ~ nav .slider {
-            width: 17%;
-            left: 0%;
-            top: 50%;
-            transition: all 1s;
-        }
-        #logo:checked ~ nav .slider {
-            width: 20%;
-            left: 17%;
-            top: 50%;
-            transition: all 1s;
-        }
-        #graphic:checked ~ nav .slider {
-            width: 20%;
-            left: 37%;
-            top: 50%;
-            transition: all 1s;
         }
         .pagination{
             margin-top: 15px;
@@ -1195,13 +1104,13 @@
             position: relative;
         }
         .dropdown-list{
-            width: 215px;
+            width: 240px;
             height: auto;
             background-color: white;
             display: none;
             list-style: none;
             position: absolute;
-            top: 22px;
+            top: 100%;
             left: 0;
             right: 0;
             box-shadow: 0px 20px px black;
@@ -1212,6 +1121,8 @@
         }
         .dropdown-list li{
             padding: 10px 0px;
+            width: 90%;
+            margin: 0 auto;
             border-bottom: 1px solid rgba(124, 123, 123, 0.2);
         }
         .dropdown-list li a{
@@ -1352,61 +1263,6 @@
         .tab-img-info-wrapper {
             width: 30%;
         }
-        .wrapper nav .slider{
-            position: absolute;
-            width: 7%;
-            height: 50%;
-            display: inline-block;
-            background-color: #81E4ED;
-            border-radius: 5px;
-            z-index: 0;
-            left: 0%;
-            bottom: 25%;
-            right: 0;
-        }
-        #all:checked ~ nav .slider {
-            width: 7%;
-            height: 50%;
-            left: 0%;
-            top: 24%;
-            transition: all 1s;
-        }
-        #website:checked ~ nav .slider {
-            width: 10%;
-            left: 8%;
-            top: 21%;
-            transition: all 1s;
-        }
-        #wordpress:checked ~ nav .slider {
-            width: 14%;
-            left: 20%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #mobile-app:checked ~ nav .slider {
-            width: 16%;
-            left: 35%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #icons:checked ~ nav .slider {
-            width: 10%;
-            left: 52%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #logo:checked ~ nav .slider {
-            width: 10%;
-            left: 62%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #graphic:checked ~ nav .slider {
-            width: 10%;
-            left: 73%;
-            top: 25%;
-            transition: all 1s;
-        }
         /* Portfolio Page Media Quries Start Here */
 
         /* Contact Page Media Quries Start Here */
@@ -1418,6 +1274,7 @@
 
     @media screen and (min-width:768px){
         header{
+            z-index: 999;
             padding: 20px 0;
         }
         .slider-one{
@@ -1444,11 +1301,12 @@
             display: none;
         }
         .top-nav-link li a{
-            font-size: 13px;
+            font-size: 12px;
             line-height: 20px;
+            padding: 5px;
         }
         .dropdown-list li{
-            margin: 0px 10px;
+            margin: 0px auto;
         }
         .secound-wrapper{
             flex-direction: row;
@@ -1528,59 +1386,6 @@
             font-size: 15px;
             line-height: 20px;
 
-        }
-        .wrapper nav .slider{
-            position: absolute;
-            width: 5%;
-            height: 50%;
-            display: inline-block;
-            z-index: 0;
-            left: 0%;
-            bottom: 25%;
-            right: 0;
-        }
-        #all:checked ~ nav .slider {
-            width: 5%;
-            height: 50%;
-            left: 0%;
-            top: 24%;
-            transition: all 1s;
-        }
-        #website:checked ~ nav .slider {
-            width: 9%;
-            left: 6%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #wordpress:checked ~ nav .slider {
-            width: 11%;
-            left: 16%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #mobile-app:checked ~ nav .slider {
-            width: 12%;
-            left: 28.5%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #icons:checked ~ nav .slider {
-            width: 8%;
-            left: 41%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #logo:checked ~ nav .slider {
-            width: 7%;
-            left: 50%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #graphic:checked ~ nav .slider {
-            width: 10%;
-            left: 57%;
-            bottom: 25%;
-            transition: all 1s;
         }
         /* ======================= Portfolio Page Media Quries End Here =========================== */
 
@@ -1741,59 +1546,6 @@
         /* Portfolio Page Media Quries Start Here */
         .tab-img-info-wrapper {
             width: 23%;
-        }
-        .wrapper nav .slider{
-            position: absolute;
-            width: 4%;
-            height: 50%;
-            display: inline-block;
-            z-index: 0;
-            left: 0%;
-            bottom: 25%;
-            right: 0;
-        }
-        #all:checked ~ nav .slider {
-            width: 4%;
-            height: 50%;
-            left: 0%;
-            top: 24%;
-            transition: all 1s;
-        }
-        #website:checked ~ nav .slider {
-            width: 6%;
-            left: 5%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #wordpress:checked ~ nav .slider {
-            width: 8.5%;
-            left: 12%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #mobile-app:checked ~ nav .slider {
-            width: 10%;
-            left: 21%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #icons:checked ~ nav .slider {
-            width: 7%;
-            left: 31%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #logo:checked ~ nav .slider {
-            width: 5%;
-            left: 38%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #graphic:checked ~ nav .slider {
-            width: 7%;
-            left: 43.5%;
-            bottom: 25%;
-            transition: all 1s;
         }
         /* Portfolio PAge Media Quries End Here */
 
@@ -1967,70 +1719,6 @@
         .tab-label {
             font-size: 14px;
         }
-        .tab-img-info-wrapper {
-            width: 22.8%;
-            height: 200px;
-            margin-bottom: 30px;
-            background-color: #21A61B;
-        }
-        .tab-content-img{
-            width:100%;
-            height: 200px;
-            margin-bottom: 20px;
-        }
-        .wrapper nav .slider{
-            position: absolute;
-            width: 3%;
-            height: 50%;
-            display: inline-block;
-            z-index: 0;
-            left: 0%;
-            bottom: 25%;
-            right: 0;
-        }
-        #all:checked ~ nav .slider {
-            width: 3%;
-            height: 50%;
-            left: 0%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #website:checked ~ nav .slider {
-            width: 6%;
-            left: 3.5%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #wordpress:checked ~ nav .slider {
-            width: 7%;
-            left: 10%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #mobile-app:checked ~ nav .slider {
-            width: 7.5%;
-            left: 18%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #icons:checked ~ nav .slider {
-            width: 4.5%;
-            left: 26.5%;
-            top: 25%;
-            transition: all 1s;
-        }
-        #logo:checked ~ nav .slider {
-            width: 4.5%;
-            left: 31.5%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #graphic:checked ~ nav .slider {
-            width: 5.5%;
-            left: 36.5%;
-            bottom: 25%;
-            transition: all 1s;
-        }
         /* Portfolio Page Media Quries Start Here */
         /* ========================================== Portfolio Page Media Quries End Here  ============================================== */
 
@@ -2074,36 +1762,6 @@
         }
         .slide-hover-info{
             width: 87.5%;
-        }
-        #wordpress:checked ~ nav .slider {
-            width: 6%;
-            left: 9%;
-            bottom: 25%;
-            transition: all 1s;
-        }
-        #mobile-app:checked ~ nav .slider {
-            width: 7%;
-            left: 15.5%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #icons:checked ~ nav .slider {
-            width: 4%;
-            left: 23%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #logo:checked ~ nav .slider {
-            width: 4%;
-            left: 27.5%;
-            bottom: 26%;
-            transition: all 1s;
-        }
-        #graphic:checked ~ nav .slider {
-            width: 5%;
-            left: 32%;
-            bottom: 25%;
-            transition: all 1s;
         }
     }
 
