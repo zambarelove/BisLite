@@ -485,13 +485,12 @@
 
 /* ==================================================== PortFolio Page Css Start Here ===================================================== */
     /* Header Section Portfolio Page Start Here  */
-        .portfolio-active-top-link{
-            border-top: 5px solid #25B8F2;
-        }
+        
+       
     /* Header Section Portfolio Page Start Here  */
 
-    .portfolio-active-link{
-        border-top: 5px solid #25B8F2;
+    .portfolio-active-link, .contact-p-active-top-link{
+        border-top: 5px solid #2AACC8;
     }
     .tab-section-title-wrapper{
         display: flex;
@@ -732,6 +731,7 @@
 
 
 /* ==================================================== Contact Page Css Start Here ===================================================== */
+   
     .contact-outer{
         background-color: white;
         padding: 30px 0;
@@ -1832,7 +1832,7 @@
         }
         .top-nav-link li a{
             font-size: 13px;
-            line-height: 19px;
+            line-height: 20px;
         }
         .secound-wrapper{
             flex-direction: row;
