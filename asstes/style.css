@@ -69,9 +69,7 @@
             padding: 10px;
             border-top: 5px solid #2AACC8;
         }
-        .portfolio-active-li{
-            border-top: 5px solid #2AACC8;
-        }
+        
         .dropdown{
             position: relative;
         }
@@ -84,19 +82,11 @@
             top: 22px;
             left: 0;
             right: 0;
-            box-shadow: 0px 20px px black;
             border-bottom: 5px solid #29ABC7;
-        }
-        .dropdown-list li:hover{
-            border-top: none;
-            width: 90%;
-            height: auto;
-            transition: all 1s;
         }
         .fa-angle-down{
             margin-left: 5px;
         }
-        
         .mobile-icon{
             display: block;
             font-size: 20px;
@@ -506,8 +496,8 @@
         
        
     /* Header Section Portfolio Page Start Here  */
-    .active-li{
-        border-top: 5px solid #2AACC8;
+    .portfolio-active-li, .contact-active-li {
+        border-top: 5px solid #2AACC8 !important;
     }
     .tab-section-title-wrapper{
         display: flex;
@@ -884,7 +874,7 @@
             filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
-            padding: 20px 0 40px 0;
+            padding: 25px 0;
         }
         .slick-dots li button:before{
             font-family: 'slick';
@@ -1043,7 +1033,7 @@
             width: 47%;
             margin-right: 0px;
             height: auto;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         .tab-content-img {
             width: 100%;
@@ -1080,6 +1070,7 @@
         .submit {
             width: 130px;
             height: 45px;
+            cursor: pointer;
         }
         /* Contact Page Media Quries End Here */
     }
@@ -1112,7 +1103,6 @@
             top: 100%;
             left: 0;
             right: 0;
-            box-shadow: 0px 20px px black;
             border-bottom: 5px solid #29ABC7;
         }
         .dropdown:hover .dropdown-list{
@@ -1120,7 +1110,7 @@
         }
         .dropdown-list li{
             padding: 10px 0px;
-            width: 90%;
+            width: 95%;
             margin: 0 auto;
             border-bottom: 1px solid rgba(124, 123, 123, 0.2);
         }
@@ -1129,10 +1119,11 @@
             line-height: 18px;
             font-family: Arial;
             text-transform: capitalize;
+            padding: 10px 0;
+            margin: 0;
         }
-        .dropdown-list li a:hover{
-            border: none;
-            padding-right: 0;
+        .dropdown-list > li:hover{
+            border-top: 5px solid transparent;
         }
         /* Header Media Quries End Here */
 
@@ -1155,9 +1146,9 @@
             left: 95% !important;
         }
         .slider-img {
-            width: 250px;
+            width: 260px;
             cursor: pointer;
-            height: 150px;
+            height: unset;
         }
         .slide-hover-info{
             width: 93.5%;
@@ -1445,10 +1436,11 @@
         .hero-slide-tittle{
             font-size: 50px;
         }
-        .secound-wrapper{
+        .services-container{
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+            padding: 30px 0;
         }
         .flex-item{
             width: 410px;
@@ -1633,6 +1625,7 @@
         .secound-container-info p {
             font-size: 13px;
             line-height: 20px;
+            margin-bottom: 15px;
         }
         .secound-container-info .secound-container-info-a {
             font-size: 13px;

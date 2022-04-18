@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <title>BisLite</title>
     <link rel="shortcut icon" href="./asstes/images/favicon1.png" type="image/x-icon" />
@@ -12,11 +12,13 @@
     <!-- Fontawsome Link Tag End Here -->
 
     <!-- Slick Slider Link Tag Start Here -->
-        <link rel="stylesheet" href="./asstes/slick/slick.css">
-        <link rel="stylesheet" href="./asstes/slick/slick-theme.css">
+        <link rel="stylesheet" href="./asstes/slick/slick.css" />
+        <link rel="stylesheet" href="./asstes/slick/slick-theme.css" />
     <!-- Slick Slider Link Tag End Here -->
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS animation Link Tag Start Here -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- AOS animation Link Tag End Here -->
 
     <!-- External Css Link Tag Start Here  -->
         <link rel="stylesheet" href="./asstes/style.css" />
@@ -29,7 +31,7 @@
                 <!-- Logo Start Here -->
                     <div class="logo">
                         <a href="./index.html">
-                            <img src="./asstes/images/logo.png" alt="Header Logo Image"  class="logo"/>
+                            <img src="./asstes/images/logo.png" alt="Header Logo Image"  class="logo" data-aos="fade-right" data-aos-duration="1000"/>
                         </a>
                     </div>
                 <!-- Logo End Here -->
@@ -37,11 +39,15 @@
                 <!-- Tablate & Desktop View Navgation Menu Start Here -->
                     <div>
                         <ul class="top-nav-link">
-                            <li class="top-nav-link-li top-li"><a href="#">Home</a></li>
-                            <li class="top-nav-link-li top-li"><a href="#">About us</a></li>
-                            <li class="dropdown top-nav-link-li top-li dropdown-one-li">
+                            <li class="top-nav-link-li" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="100">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="top-nav-link-li" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="400">
+                                <a href="#">About us</a>
+                            </li>
+                            <li class="dropdown top-nav-link-li dropdown-one-li" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">
                                 <a href="#" >Services <i class="fa-solid fa-angle-down"></i></a>
-                                <ul class="dropdown-list dropdown-list-one">
+                                <ul class="dropdown-list dropdown-list-one" >
                                     <li class="dropdown-list-li"><a href="#">Web Design</a></li>
                                     <li class="dropdown-list-li"><a href="#">Wordpress Design</a></li>
                                     <li class="dropdown-list-li"><a href="#">Mobile App Devplopment</a></li>
@@ -49,7 +55,7 @@
                                     <li class="dropdown-list-li"><a href="#">Social Media Management</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown top-nav-link-li top-li">
+                            <li class="dropdown top-nav-link-li" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200">
                                 <a href="./asstes/portfolio.html">Portfolio <i class="fa-solid fa-angle-down"></i></a>
                                 <ul class="dropdown-list">
                                     <li class="dropdown-list-li"><a href="#">Drop Down 1</a></li>
@@ -58,8 +64,8 @@
                                     <li class="dropdown-list-li"><a href="#">Drop Down 4</a></li>
                                 </ul>
                             </li>
-                            <li class="top-nav-link-li top-li"><a href="#">Blog</a></li>
-                            <li class="top-nav-link-li top-li"><a href="./asstes/contact.html">Contact Us</a></li>
+                            <li class="top-nav-link-li" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1400"><a href="#">Blog</a></li>
+                            <li class="top-nav-link-li" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1800"><a href="./asstes/contact.html">Contact Us</a></li>
                         </ul>
                     </div>
                 <!-- Tablate & Desktop View Navgation Menu End Here -->
@@ -70,8 +76,8 @@
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                             <a href="./index.html">home</a>
                             <a href="#">About us</a>
-                            <a href="#">Services</a>
-                            <a href="./asstes/portfolio.html">Portfolio</a>
+                            <a href="#">Services <i class="fa-solid fa-angle-down"></i> </a>
+                            <a href="./asstes/portfolio.html">Portfolio <i class="fa-solid fa-angle-down"></i></a>
                             <a href="#">Blog</a>
                             <a href="./asstes/contact.html">Contact Us</a>
                         </div>
@@ -89,9 +95,9 @@
                 <div class="hero-slider">
                     <div class="hero-slide">
                         <div class="hero-slide-img-wrpper">
-                            <img src="./asstes/images/slider-img.png" alt="coffee img" class="hero-slide-img" />
+                            <img src="./asstes/images/slider-img.png" alt="coffee img" class="hero-slide-img" data-aos="fade-out" data-aos-duration="2000"/>
                             <div class="hero-slide-info">
-                                <h2 class="hero-slide-tittle">We design clean, crisp & memorable icons</h2>
+                                <h2 class="hero-slide-tittle" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">We design clean, crisp & memorable icons</h2>
                             </div>
                         </div>
                     </div>
@@ -135,7 +141,7 @@
     <!-- Services Container Start Here -->
         <div class="container-fluid services-container">
             <div class="container secound-wrapper">
-                <div class="clean-theme flex-item">
+                <div class="clean-theme flex-item" data-aos="fade-down" data-aos-duration="600">
                     <div class="title">
                         <div>
                             <img src="./asstes/images/secound-container-images/pencile.png" alt="">
@@ -150,7 +156,7 @@
                         <a href="#" class="read-more"><i class="fa-solid fa-angle-right services-right-arrow"></i> Read More</a>
                     </div>
                 </div>
-                <div class="resposive-design flex-item">
+                <div class="resposive-design flex-item" data-aos="fade-down" data-aos-duration="800">
                     <div class="title">
                         <div>
                             <img src="./asstes/images/secound-container-images/design.png" alt="">
@@ -164,7 +170,7 @@
                         <a href="#" class="read-more"><i class="fa-solid fa-angle-right services-right-arrow"></i> Read More</a>
                     </div>
                 </div>
-                <div class="full-psd flex-item">
+                <div class="full-psd flex-item" data-aos="fade-down" data-aos-duration="1000">
                     <div class="title">
                         <div>
                             <img src="./asstes/images/secound-container-images/psd.png" alt="">
@@ -178,7 +184,7 @@
                         <a href="#" class="read-more"><i class="fa-solid fa-angle-right services-right-arrow"></i> Read More</a>
                     </div>
                 </div>
-                <div class="coding flex-item">
+                <div class="coding flex-item" data-aos="fade-down" data-aos-duration="1400">
                     <div class="title">
                         <div>
                             <img src="./asstes/images/secound-container-images/coding.png" alt="">
@@ -201,7 +207,7 @@
             <div class="container slick-initialized slick-slider">
                 <!-- Latest Work Section Start Here -->
                     <div class="leatest-work">
-                        <div class="section-header">
+                        <div class="section-header" data-aos="fade-out" data-aos-duration="2000">
                             <div>
                                 <img src="./asstes/images/leates-news-img/arrow.png" alt="arrow img" />
                             </div>
@@ -214,7 +220,7 @@
 
                 <!-- Leatest Work slider start here -->
                     <div class="secound-slider-wrpper latest-work-slider">
-                        <div class="slide-one slide">
+                        <div class="slide-one slide" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" class="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
@@ -225,7 +231,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-two slide">
+                        <div class="slide-two slide" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="./asstes/images/leates-news-img/lemon.png" alt="Notepad Image" class="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
@@ -236,7 +242,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-three slide">
+                        <div class="slide-three slide" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="./asstes/images/leates-news-img/shape.png" alt="Notepad Image" class="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
@@ -247,7 +253,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-four slide">
+                        <div class="slide-four slide" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="./asstes/images/leates-news-img/last.png" alt="Notepad Image" class="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
@@ -258,7 +264,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-one slide">
+                        <div class="slide-one slide" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="./asstes/images/leates-news-img/notepad.png" alt="Notepad Image" class="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
@@ -269,7 +275,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="slide-two slide">
+                        <div class="slide-two slide" data-aos="zoom-in" data-aos-duration="1000">
                             <img src="./asstes/images/leates-news-img/lemon.png" alt="Notepad Image" class="slider-img" />
                             <div class="slide-hover-info">
                                 <a href="#">
@@ -286,39 +292,39 @@
                 <!-- Testimonial & Client Section Start Here -->
                     <div class="testimonial-client-wrapper">
                         <div class="testimonial">
-                            <div class="testimonial-client-header">
+                            <div class="testimonial-client-header" data-aos="fade-out" data-aos-duration="2000">
                                 <img src="./asstes/images/client/testimonial-logo.png" alt="">
                                 <h2 class="testimonial-client-heading">Testimonial</h2>
                             </div>
                             <div>
-                                <p class="testimonial-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem eaque beatae doloremque? Maxime cupiditate et libero odio explicabo. Non nesciunt eos cumque maxime voluptatem saepe praesentium nemo totam repellendus inventore, aut vero ipsam ipsum. Exercitationem, accusamus? Saepe molestias delectus possimus voluptatibus officia reprehenderit pariatur error nam asperiores aspernatur. Consequatur provident dolore in ipsum omnis, possimus modi?</p>
+                                <p class="testimonial-p" data-aos="fade-right" data-aos-duration="1300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem eaque beatae doloremque? Maxime cupiditate et libero odio explicabo. Non nesciunt eos cumque maxime voluptatem saepe praesentium nemo totam repellendus inventore, aut vero ipsam ipsum. Exercitationem, accusamus? Saepe molestias delectus possimus voluptatibus officia reprehenderit pariatur error nam asperiores aspernatur. Consequatur provident dolore in ipsum omnis, possimus modi?</p>
 
-                                <p class="reviewer"><i>John Travis, CEO, DomainName.com</i></p>
+                                <p class="reviewer" data-aos="fade-right" data-aos-duration="2500"><i>John Travis, CEO, DomainName.com</i></p>
                             </div>
                         </div>
                         <div class="client">
-                            <div class="testimonial-client-header">
-                                <img src="./asstes/images/client/client-logo.png" alt="">
+                            <div class="testimonial-client-header" data-aos="fade-out" data-aos-duration="2000">
+                                <img src="./asstes/images/client/client-logo.png" alt="Person Icon Image" />
                                 <h2 class="testimonial-client-heading">Our Client</h2>
                             </div>
                             <div class="client-brand-img-wrapper">
                                 <div class="brand-line">
-                                    <div class="cox-outer">
+                                    <div class="cox-outer" data-aos="zoom-in" data-aos-duration="600">
                                         <img src="./asstes/images/client/client-1.png" alt="cox brand logo" />
                                     </div>
-                                    <div class="cnn-outer">
+                                    <div class="cnn-outer" data-aos="zoom-in" data-aos-duration="800">
                                         <img src="./asstes/images/client/client-2.png" alt="cnn brand logo" />
                                     </div>
-                                    <div class="finder-outer">
+                                    <div class="finder-outer" data-aos="zoom-in" data-aos-duration="1000">
                                         <img src="./asstes/images/client/client-3.png" alt="finder brand logo" />
                                     </div>
-                                    <div class="John-outer">
+                                    <div class="John-outer" data-aos="zoom-in" data-aos-duration="1300">
                                         <img src="./asstes/images/client/client-4.png" alt="John Deere brand logo" />
                                     </div>
-                                    <div class="boat-outer">
+                                    <div class="boat-outer" data-aos="zoom-in" data-aos-duration="1600">
                                         <img src="./asstes/images/client/client-5.png" alt="Banama boat brand logo" />
                                     </div>
-                                    <div class="fujiflim-outer">
+                                    <div class="fujiflim-outer" data-aos="zoom-in" data-aos-duration="2000">
                                         <img src="./asstes/images/client/client-6.png" alt="fujiflim brand logo" />
                                     </div>
                                 </div>
@@ -328,11 +334,11 @@
                 <!-- Testimonial & Client Section End Here -->
                 
                 <!-- Download Section Start Here -->
-                    <div class="blue-container">
+                    <div class="blue-container" data-aos="zoom-in" >
                         <div>
                             <p class="blue-paragraph">This is a clean and morden, four column PSD Template. You can code it into a Wordpress website. HTML5 responsive website for your personal or client works. So ahead and download and this wonderful PSD Template!</p>
                         </div>
-                        <div class="download-btn">
+                        <div class="download-btn" data-aos="fade-down" data-aos-delay="1000">
                             <a href="#" > 
                                 <img src="./asstes/images/client/download-icon.png" alt="Download Icon Image"> DOWNLOAD PSD
                             </a>
@@ -344,10 +350,10 @@
     <!--  Latest work Container End Here -->
 
     <!-- Footer Container Start Here -->
-        <footer class="container-fluid">
+        <footer class="container-fluid" data-aos="zoom-in">
             <div class="container footer-wrapper">
                 <div class="footer-first-line">
-                    <div class="about">
+                    <div class="about" data-aos="fade-down" data-aos-delay="800">
                         <div class="footer-section-header">
                             <h3 class="footer-section-heading">About us</h3>
                         </div>
@@ -355,7 +361,7 @@
                             <p class="footer-about-p footer-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam minus repudiandae cum illo, voluptate quas ab veritatis cupiditate nam praesentium et expedita non sequi distinctio numquam atque perferendis nostrum dicta maxime deserunt quisquam, libero obcaecati. Harum facere deleniti soluta quis!</p>
                         </div>
                     </div>
-                    <div class="explore">
+                    <div class="explore" data-aos="fade-down" data-aos-delay="1000">
                         <div class="footer-section-header">
                             <h3 class="footer-section-heading">explore</h3>
                         </div>
@@ -364,12 +370,12 @@
                                 <li ><a href="#" class="footer-text">Home</a></li>
                                 <li class="footer-nav-link-li"><a href="#" class="footer-text">About us</a></li>
                                 <li class="footer-nav-link-li"><a href="#" class="footer-text">Services</a></li>
-                                <li class="footer-nav-link-li"><a href="#" class="footer-text">Portfolio</a></li>
+                                <li class="footer-nav-link-li"><a href="./asstes/portfolio.html" class="footer-text">Portfolio</a></li>
                                 <li class="footer-nav-link-li"><a href="#" class="footer-text">Blog</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="browse">
+                    <div class="browse" data-aos="fade-down" data-aos-delay="1200">
                         <div class="footer-section-header">
                             <h3 class="footer-section-heading">browse</h3>
                         </div>
@@ -377,13 +383,13 @@
                             <ul class="footer-link">
                                 <li><a href="#" class="footer-text">Careers</a></li>
                                 <li class="footer-nav-link-li"><a href="#" class="footer-text">Press & Media</a></li>
-                                <li class="footer-nav-link-li"><a href="#" class="footer-text">Contact US</a></li>
+                                <li class="footer-nav-link-li"><a href="./asstes/contact.html" class="footer-text">Contact US</a></li>
                                 <li class="footer-nav-link-li"><a href="#" class="footer-text">Terms of Service</a></li>
                                 <li class="footer-nav-link-li"><a href="#" class="footer-text">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="contact">
+                    <div class="contact" data-aos="fade-down" data-aos-delay="1400">
                         <div class="footer-section-header">
                             <h3 class="footer-section-heading">contact us</h3>
                         </div>
@@ -399,7 +405,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="social-link">
+                    <div class="social-link" data-aos="fade-down" data-aos-delay="1600">
                         <div class="footer-section-header">
                             <h3 class="footer-section-heading social-link-heading">contact with us</h3>
                         </div>
@@ -467,7 +473,12 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
         <!-- Slick Slider "Script src" Tag End Here -->
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- AOS Animation Script Tag Start Here -->
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+        <!-- AOS Animation Script Tag End Here -->
 
         <!-- External js File Script tag Start Here -->
             <script src="./asstes/js/index.js"></script>
