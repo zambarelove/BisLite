@@ -46,9 +46,11 @@
             display: none;
             list-style: none;
         }
-        .top-nav-link li{
+        .top-nav-link li{   
             padding: 10px;
             position: relative;
+            cursor: pointer;
+            border-top: 5px solid transparent;
         }
         .top-nav-link li a{
             font-size: 13px;
@@ -58,6 +60,9 @@
             font-family: Arial;
             padding: 10px;
             text-transform: uppercase;
+        }
+        .top-nav-link li a:hover{
+            color: #2AACC8;
         }
         .top-nav-link li:hover{
             background-color: white;
@@ -83,15 +88,9 @@
             box-shadow: 0px 20px px black;
             border-bottom: 5px solid #29ABC7;
         }
-        .top-nav-link li a:hover{
-            /* padding: 10px; */
-            color: #2AACC8;
-        }
         .dropdown-list li:hover{
             border-top: none;
-            margin-left: 0;
             width: 90%;
-            margin: 0 auto;
             transition: all 1s;
         }
         .fa-angle-down{
@@ -210,7 +209,7 @@
             border-bottom: 1px solid #dfe1e5;
             position: relative;
         }
-       .section-header{
+        .section-header{
             display: flex;
             align-items: center;
             padding: 20px 0;
@@ -1133,6 +1132,7 @@
         }
         .dropdown-list li a:hover{
             border: none;
+            padding-right: 0;
         }
         /* Header Media Quries End Here */
 
@@ -1303,10 +1303,13 @@
         .top-nav-link li a{
             font-size: 12px;
             line-height: 20px;
+            padding: 10px;
+        }
+        .top-nav-link li{   
             padding: 5px;
         }
         .dropdown-list li{
-            margin: 0px auto;
+            padding: 10px 0;
         }
         .secound-wrapper{
             flex-direction: row;
@@ -1428,7 +1431,9 @@
         }
         .top-nav-link-li{
             margin: 0px 10px;
+            /* padding: 10px 0; */
         }
+        
         .slick-dots li button:before{
             font-size: 50px;
             line-height: 20px;
@@ -1580,11 +1585,12 @@
             margin: 0 auto;
         }
         .top-nav-link-li{
-            margin: 0px 15px;
+            margin: 0px 10px;
         }
         .top-nav-link li a{
             font-size: 13px;
             line-height: 20px;
+            padding: 10px;
         }
         .secound-wrapper{
             flex-direction: row;
