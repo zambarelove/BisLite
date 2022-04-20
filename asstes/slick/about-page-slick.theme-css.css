@@ -86,7 +86,7 @@
     right: -25px;
     left: auto;
 }
-.about-slick-prev:before
+.slick-prev:before
 {
     content: '';
     width: 20px;
@@ -109,7 +109,7 @@
     right: auto;
     left: -25px;
 }
-.about-slick-next:before
+.slick-next:before
 {
     content: '';
     width: 20px;
