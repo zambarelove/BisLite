@@ -85,6 +85,7 @@
             border-bottom: 5px solid #29ABC7;
         }
         .fa-angle-down{
+            font-size: 14px;
             margin-left: 5px;
         }
         .mobile-icon{
@@ -108,13 +109,14 @@
         .sidepanel a {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
-            font-size: 20px;
-            line-height: 30px;
+            font-size: 16px;
+            line-height: 21px;
             font-family: Arial;
             color: black;
             display: block;
             transition: 0.3s;
             text-transform: uppercase;
+            margin-bottom: 20px;
         }
         .sidepanel a:hover {
             color: #25B8F2;
@@ -595,11 +597,22 @@
         bottom: 0px;transition: all 0.5s;
     }
 
-/* ==================================================== About Us Page Css End Her =================================================== */
+/* ==================================================== About Us Page Css End Her   ======================================================= */
 
+/* ==================================================== Services Page Css Start Here ====================================================== */
+    .fa-gear{
+        color: #2aacc8;
+    }
+    .services-page-p{
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 21px;
+        text-indent: 70px;
+    }
+/* ==================================================== Services Page Css End Here ======================================================== */
 
 /* ==================================================== PortFolio Page Css Start Here ===================================================== */
-    .home-active-li, .portfolio-active-li, .about-active-link, .contact-active-li {
+    .home-active-li, .portfolio-active-li, .about-active-link, .services-active-li, .blog-active-li, .contact-active-li {
         border-top: 5px solid #2AACC8 !important;
     }
     .tab-section-title-wrapper{
@@ -715,11 +728,10 @@
     #graphic:checked ~  nav label.graphic{
         color: white;
         background-color: #81E4ED;
-        transition: all 1s;
+        transition: all 0.5s;
     }
     section .content{
         display: none;
-        
     }
     section .tittle{
         font-size: 22px;
@@ -785,6 +797,61 @@
     }
 /* ==================================================== PortFolio Page Css End Here ===================================================== */
 
+/* ==================================================== Blog Page Css Start Here   ======================================================== */
+    .blog-outer{
+        background-color:#e8ebf1;
+    }
+    .blog-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 35px;
+    }
+    .blog-card{
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 35px;
+    }
+    .blog-card-img{
+        width: 100%;
+        transform: scale(1);
+        transition: all 0.5s;
+    }
+    .blog-card-info-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .blog-card-tittle{
+        font-size: 18px;
+        line-height: 27px;
+        font-family: Arial;
+    }
+    .blog-date{
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 21px;
+        color: #2aacc8;
+    }
+    .blog-card-info p{
+        font-size: 14px;
+        line-height: 21px;
+        font-family: Arial;
+        margin-bottom: 15px;
+    }
+    .Blog-read-more{
+        font-size: 14px;
+        line-height: 21px;
+        color: #2aacc8;
+    }
+    .Blog-read-more:hover{
+        text-decoration: underline;
+    }
+    
+/* ==================================================== Blog Page Css End Here ============================================================ */
 
 /* ==================================================== Contact Page Css Start Here ===================================================== */
    
@@ -1436,6 +1503,12 @@
         }
         /* ========================================= About Page Media Quries Start Here ================================================ */
 
+        /* ========================================= Blog Page Media Quries Start Here ==================================================== */
+        
+        /* ========================================= Blog Page Media Quries End Here ====================================================== */
+        .blog-card{
+            flex-basis: 47%;
+        }
         /* ========================================= Contact Page Media Quries Start Here ================================================= */
         .we-here{
             margin-bottom: 20px;
@@ -1604,7 +1677,13 @@
         }
         /* ======================= Portfolio Page Media Quries End Here =========================== */
 
-        /* ======================= Contact Page Media Quries Start Here =========================== */
+        /* ======================================== Blog Page Media Quries Start Here ============================================================ */
+            .blog-card{
+                flex-basis: 47%;
+            }
+        /* ======================================== Blog Page Media Quries End Here ============================================================== */
+        
+        /* ======================================== Contact Page Media Quries Start Here ========================================================= */
         .contact-info {
             flex-basis: 50%;
             margin-bottom: 0;
@@ -1776,6 +1855,12 @@
             width: 90%;
         }
         /* ============================================= About Us Page Media Quries Start Here  =========================================== */
+
+        /* ======================================== Blog Page Media Quries Start Here ============================================================ */
+        .blog-card{
+            flex-basis: 23%;
+        }
+        /* ======================================== Blog Page Media Quries End Here ============================================================== */
 
         /* =============================================  Portfolio Page Media Quries Start Here ========================================== */
         .tab-img-info-wrapper {
