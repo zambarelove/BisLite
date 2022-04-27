@@ -624,6 +624,7 @@
     }
     .services-card{
         background-color: #E8EBF1;
+        background-color: rgba(232, 235, 241, 0.4);
         border: 1px solid rgba(0,0,0,0.15);
         margin-bottom: 20px;
         overflow: hidden;
@@ -2100,7 +2101,7 @@
 
         /* ============================================= Services Page Media Quries Start Here ============================================ */
         .services-card {
-            flex-basis: 30%;
+            flex-basis: 32%;
         }
         .disscuss-wrapper > div > p{
             width: 55%;
