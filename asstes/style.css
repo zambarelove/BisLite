@@ -187,7 +187,7 @@
             font-size: 14px;
             line-height: 21px;
             font-family: Arial;
-            color: #25B8F2;
+            color: #2aacc8;
         }
         .services-right-arrow{
             color: #000000;
@@ -207,8 +207,8 @@
             padding: 20px 0;
         }
         .section-heading{
-            font-size: 20px;
-            line-height: 26px;
+            font-size: 18px;
+            line-height: 21px;
             color: black;
             font-weight: bold;
             font-family: Arial;
@@ -600,14 +600,128 @@
 /* ==================================================== About Us Page Css End Her   ======================================================= */
 
 /* ==================================================== Services Page Css Start Here ====================================================== */
-    .fa-gear{
+    .services-header > .section-tittle{
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dfe1e5;
+    }
+    .fa-gear, .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users{
+        color: #2aacc8;
+    }
+    .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users{
+        padding-right: 10px;
+    }
+    .services-outer{
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+    .services-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+    .services-card{
+        background-color: #E8EBF1;
+        border: 1px solid rgba(0,0,0,0.15);
+        margin-bottom: 20px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .services-card-img{
+        width: 100%;
+        transform: scale(1);
+        transition: all 0.5s;
+    }
+    .services-card-info{
+        padding: 15px;
+    }
+    .services-card:hover .services-header, .services-card:hover .services-header > .services-card-img{
+        background-color: #2aacc8;
+        transform: scale(1.1);
+    }
+    .services-card-info >.section-tittle{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #2aacc8;
+    }
+    .services-card:hover .services-card-info >.section-tittle{
         color: #2aacc8;
     }
     .services-page-p{
         font-family: Arial;
         font-size: 14px;
         line-height: 21px;
-        text-indent: 70px;
+        margin-bottom: 15px;
+    }
+    .counting-wrpper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .count-card{
+        width: 40%;
+        text-align: center;
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 24px;
+        background-color: #e8fcfe;
+        border: 1px solid #81e4ed;
+        padding: 20px 10px;
+        margin-bottom: 20px;
+    }
+    .disscuss-outer{
+        border: 1px solid rgba(0,0,0,0.15);
+        background-color:  #E8EBF1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .disscuss-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+    }
+    .disscuss-btn-wrapper{
+        margin-top: 30px;
+    }
+    .discus-info > .section-tittle{
+        font-size: 14px;
+    }
+    .discus-info > .footer-text{
+        font-size: 14px;
+    }
+    .discuss-btn{
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 700;
+        padding: 15px;
+        transition: color 0.5s;
+        margin-top: 15px;
+        border-radius: 8px;
+        filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
+        background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
+        border: 1px solid #2aacc8;
+    }
+    .discuss-btn:hover{
+        color: white;
+    }
+    .mb{
+        margin-bottom: 35px;
+    }
+    .mobile-app-devlopment-ul{
+        margin-left: 25px;
+    }
+    .mobile-app-devlopment-ul li{
+        width: 100%;
     }
 /* ==================================================== Services Page Css End Here ======================================================== */
 
@@ -1009,7 +1123,89 @@
     }
 /* ==================================================== Contact Page Css End Here ===================================================== */
 
-
+/* ==================================================== Services Inner Page Css Start Here ============================================ */
+    .web-design-page-banner{
+        width: 100%;
+    }
+    .web-design-wrapper{
+        margin-bottom: 15px;
+    }
+    .detail-page-header{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #dfe1e5;
+        margin-top: 30px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    .web-design-tittle, .wordpress-tittle, .social-media-tittle{
+        margin-bottom: 0px;
+    }
+    .mobile-app-development-page-wrapper{
+        margin-bottom: 20px;
+    }
+    .detail-page-tittle{
+        padding-left: 15px;
+    }
+    .web-design-page-question{
+        font-family: Arial;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .question-answer{
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 22px;
+        color: #363636;
+        margin-bottom: 15px;
+    }
+    .service-ol{
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    .service-ol li{
+        margin-bottom: 10px;
+        color: #363636;
+        font-size: 16px;
+        line-height: 21px;
+        font-family: Arial;
+    }
+    .web-design-header{
+        display: flex;
+    }
+   
+    .web-design-why-choose-wrpper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .web-design-why-choose-card{
+        background-color: rgb(232, 235, 241);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        margin-bottom: 20px;
+        flex-basis: 100%;
+    }
+    .web-design-why-choose-tittle{
+        font-size: 16px;
+        line-height: 21px;
+        font-family: Arial;
+        text-transform: uppercase;
+    }
+    .web-design-why-choose-p{
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 24px;
+        color: #363636;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .wordpress-design-info > .section-tittle{
+        margin-bottom: 0px;
+    } 
+/* ==================================================== Services Inner Page Css Start Here ============================================ */
 
 
 /* All Device Media Quries Start Here */
@@ -1503,12 +1699,43 @@
         }
         /* ========================================= About Page Media Quries Start Here ================================================ */
 
-        /* ========================================= Blog Page Media Quries Start Here ==================================================== */
-        
-        /* ========================================= Blog Page Media Quries End Here ====================================================== */
-        .blog-card{
+        /* ========================================= Services Page Media Quries Start Here ================================================ */
+
+        .services-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .services-card{
             flex-basis: 47%;
         }
+        .counting-wrpper{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+        .count-card {
+            margin-bottom: 20px;
+            flex-basis: 30%;
+        }
+        .web-design-why-choose-wrpper{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .web-design-why-choose-card{
+            flex-basis: 45%;
+        }
+        /* ========================================= Services Page Media Quries Start Here ================================================ */
+        
+        /* ========================================= Blog Page Media Quries Start Here ====================================================== */
+        .blog-card{
+            flex-basis: 47%;
+
+        }
+        /* ========================================= Blog Page Media Quries End Here ==================================================== */
+
+
         /* ========================================= Contact Page Media Quries Start Here ================================================= */
         .we-here{
             margin-bottom: 20px;
@@ -1634,7 +1861,7 @@
         }
         /* Footer Css End Here */
 
-        /* ======================= About Page Media Quries Start Here =============================== */
+        /* ======================================= About Page Media Quries Start Here ==================================================== */
         .about-banner{
             height: 82vh;
         }
@@ -1661,9 +1888,9 @@
         .what-we-do-btn{
             margin-top: 0px;
         }
-        /* ======================= About Page Media Quries Start Here =============================== */
+        /* ======================================== About Page Media Quries Start Here ================================================== */
 
-        /* ======================= Portfolio Page Media Quries Start Here =========================== */
+        /* ======================================== Portfolio Page Media Quries Start Here ============================================== */
         .tab-section-title-wrapper{
             margin-top: 30px;
             margin-bottom: 10px;
@@ -1675,15 +1902,30 @@
             line-height: 20px;
 
         }
-        /* ======================= Portfolio Page Media Quries End Here =========================== */
+        /* ======================================== Portfolio Page Media Quries End Here ================================================= */
 
-        /* ======================================== Blog Page Media Quries Start Here ============================================================ */
+        /* ======================================== Services Page Media Quries Start Here ================================================= */
+        .services-card{
+            flex-basis: 47%;
+        }
+        .discus-info > .section-tittle{
+            font-size: 16px;
+        }
+        .count-card {
+            flex-basis: 20%;
+        }
+        .mobile-app-devlopment-ul li{
+            width: 100%;
+        }
+        /* ======================================== Services Page Media Quries End Here ================================================= */
+
+        /* ======================================== Blog Page Media Quries Start Here =================================================== */
             .blog-card{
                 flex-basis: 47%;
             }
-        /* ======================================== Blog Page Media Quries End Here ============================================================== */
+        /* ======================================== Blog Page Media Quries End Here =================================================== */
         
-        /* ======================================== Contact Page Media Quries Start Here ========================================================= */
+        /* ======================================== Contact Page Media Quries Start Here ==================================================== */
         .contact-info {
             flex-basis: 50%;
             margin-bottom: 0;
@@ -1706,7 +1948,7 @@
             width: 100%;
             height: 100%;
         }
-        /* ======================= Contact Page Media Quries End Here ============================= */
+        /* ====================================== Contact Page Media Quries End Here ====================================================== */
     }
 
     @media screen and (min-width:992px){
@@ -1854,13 +2096,50 @@
         .team-card{
             width: 90%;
         }
-        /* ============================================= About Us Page Media Quries Start Here  =========================================== */
+        /* ============================================= About Us Page Media Quries End Here  =========================================== */
 
-        /* ======================================== Blog Page Media Quries Start Here ============================================================ */
+        /* ============================================= Services Page Media Quries Start Here ============================================ */
+        .services-card {
+            flex-basis: 30%;
+        }
+        .disscuss-wrapper > div > p{
+            width: 55%;
+        }
+        .disscuss-wrapper {
+            flex-direction: row;
+        }
+        .disscuss-wrapper .disscuss-btn-wrapper{
+            flex-basis: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .disscuss-btn-wrapper{
+            margin-top: 0;
+        }
+        .web-design-why-choose-card{
+            flex-basis: 32%;
+        }
+        .service-ol{
+            padding-left: 40px;
+        }
+        .wordpress-why-choose-tittle{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .wordrpress-design-wrapper{
+            display: flex;
+        }
+        .web-design-why-choose-wrpper{
+            justify-content: space-between;
+        }
+        /* ============================================= Services Page Media Quries End Here ============================================ */
+
+        /* ============================================= Blog Page Media Quries Start Here ======================================== */
         .blog-card{
             flex-basis: 23%;
         }
-        /* ======================================== Blog Page Media Quries End Here ============================================================== */
+        /* ============================================= Blog Page Media Quries End Here ========================================= */
 
         /* =============================================  Portfolio Page Media Quries Start Here ========================================== */
         .tab-img-info-wrapper {
@@ -1886,6 +2165,9 @@
         iframe{
             width: 100%;
             height: 100%;
+        }
+        .mobile-app-devlopment-ul li{
+            width: 70%;
         }
         /* ============================================= Contact Page Media Quries End Here =============================================== */
     }
@@ -2052,8 +2334,15 @@
         }
         /* =========================================== About Us Page Media Quries End Here ============================================== */
 
-        /* =========================================== Portfolio Page Media Quries Start Here ============================================= */
+        /* =========================================== Services Page Media Quries Start Here ============================================= */
 
+        /* =========================================== Services Page Media Quries End Here ============================================= */
+        .services-wrapper{
+            justify-content: space-between;
+        }
+        .count-card {
+            flex-basis: 18%;
+        }
         /* =========================================== Portfolio Page Media Quries Start Here ============================================== */
         .tab-link-ul li{
             padding: 5px 15px;
@@ -2062,9 +2351,8 @@
         .tab-label {
             font-size: 14px;
         }
-        /* =========================================== Portfolio Page Media Quries Start Here ============================================= */
+        /* =========================================== Portfolio Page Media Quries End Here ============================================= */
 
-        /* =========================================== Portfolio Page Media Quries End Here   ============================================= */
 
         /* ========================================== Contact Page Media Quries Start Here  ============================================== */
         .contact-info {
