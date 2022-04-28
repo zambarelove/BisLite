@@ -6,6 +6,13 @@ function openNav() {
     document.getElementById("mySidepanel").style.width = "0";
   }
 
+  window.addEventListener('scroll', function (){
+    let nav = document.querySelector('header');
+    let windowPosition = window.scrollY > 70;
+    nav.classList.toggle('on-scroll' , windowPosition)
+  })
+
+
   $('.latest-work-slider').slick({
     dots: false,
     infinite: true,

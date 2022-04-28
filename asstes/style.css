@@ -33,6 +33,15 @@
             display: flex;
             align-items: center;
         }
+        .on-scroll{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.5s;
+        }
         .container{
             width: 100%;
             padding: 0px 10px;
@@ -69,7 +78,6 @@
             padding: 10px;
             border-top: 5px solid #2AACC8;
         }
-        
         .dropdown{
             position: relative;
         }
@@ -502,9 +510,20 @@
         background-position: center center;
         background-repeat: no-repeat;
     }
+    .value-wrapper{
+        padding-top: 30px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     .value-container{
         filter: drop-shadow(0px -2px 2.5px rgba(0,0,0,0.07));
         background-color: #e8ebf1;
+    }
+    .value{
+        margin-bottom: 20px;
     }
     .section-tittle{
         font-family: Arial;
@@ -514,13 +533,7 @@
         margin-bottom: 10px;
         font-weight: bold;
     }
-    .value-wrapper{
-        padding: 30px 0;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+    
     .about-p{
         font-family: Arial;
         font-size: 14px;
@@ -604,10 +617,10 @@
         padding-bottom: 10px;
         border-bottom: 1px solid #dfe1e5;
     }
-    .fa-gear, .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users{
+    .fa-gear, .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users, .fa-blog{
         color: #2aacc8;
     }
-    .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users{
+    .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users, .fa-blog{
         padding-right: 10px;
     }
     .services-outer{
@@ -623,7 +636,6 @@
         padding-top: 10px;
     }
     .services-card{
-        background-color: #E8EBF1;
         background-color: rgba(232, 235, 241, 0.4);
         border: 1px solid rgba(0,0,0,0.15);
         margin-bottom: 20px;
@@ -635,26 +647,29 @@
         transform: scale(1);
         transition: all 0.5s;
     }
+    .services-card-header{
+        overflow: hidden;
+    }
     .services-card-info{
         padding: 15px;
     }
-    .services-card:hover .services-header, .services-card:hover .services-header > .services-card-img{
-        background-color: #2aacc8;
-        transform: scale(1.1);
+    .services-card:hover .services-header, .services-card:hover .services-card-img{
+        background-color: rgba(74, 183, 207, 0.4);
+        transform: scale(1.1);overflow: hidden;
     }
-    .services-card-info >.section-tittle{
+    .services-card-info .section-tittle{
         margin-top: 10px;
         margin-bottom: 10px;
         color: #2aacc8;
-    }
-    .services-card:hover .services-card-info >.section-tittle{
-        color: #2aacc8;
+        font-size: 16px;
+        line-height: 24px;
     }
     .services-page-p{
         font-family: Arial;
         font-size: 14px;
         line-height: 21px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .counting-wrpper{
         display: flex;
@@ -676,7 +691,7 @@
     }
     .disscuss-outer{
         border: 1px solid rgba(0,0,0,0.15);
-        background-color:  #E8EBF1;
+        background-color: rgba(232, 235, 241, 0.4);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -913,20 +928,22 @@
 /* ==================================================== PortFolio Page Css End Here ===================================================== */
 
 /* ==================================================== Blog Page Css Start Here   ======================================================== */
-    .blog-outer{
-        background-color:#e8ebf1;
-    }
+    
     .blog-wrapper{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-top: 35px;
+        padding-top: 30px;
+    }
+    .blog-header{
+        padding-top: 30px;
+        border-bottom: 1px solid #dfe1e5;
     }
     .blog-card{
         width: 100%;
         padding: 10px;
-        background-color: white;
-        margin-bottom: 35px;
+        background-color: rgba(232, 235, 241, 0.4);
+        margin-bottom: 25px;
     }
     .blog-card-img{
         width: 100%;
@@ -944,6 +961,7 @@
         font-size: 18px;
         line-height: 27px;
         font-family: Arial;
+        color: #2aacc8;
     }
     .blog-date{
         font-family: Arial;
@@ -965,7 +983,124 @@
     .Blog-read-more:hover{
         text-decoration: underline;
     }
-    
+
+    .blog-detail-content-wrapper{
+        background-color: rgba(232, 235, 241, 0.3);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 40px;
+    }
+    .comment-box{
+        background-color: rgba(232, 235, 241, 0.3);
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .Blog-detail-page-img{
+        width: 100%;
+    }
+    .blog-detail-header{
+        background-image: url('./images/blog-page-img/aleks-dorohovich-nJdwUHmaY8A-unsplash.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        min-height: 82vh;
+    }
+    .blog-detail-content-header{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(180, 186, 197, 0.4);
+    }
+    .blog-detail-img-wrapper{
+        flex-basis: 10%;
+    }
+    .blog-detail-page-writter-img{
+        border-radius: 50%;
+        width: 70%;
+    }
+    .blog-detail-page-tittle{
+        margin-bottom: 0;
+    }
+    .blog-writter-name{
+        font-family: Arial;
+        color: #363636;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .blog-question{
+        margin-bottom: 5px;
+    }
+    .blog-answer{
+        font-family: Arial;
+        font-size: 14px;
+        line-height: 21px;
+        color: #363636;
+        margin-bottom: 10px;
+    }
+    .blog-page-question-wrapper{
+        margin-top: 20px;
+    }
+    .comment-box-input-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .comment-box-input-wrapper div{
+        width: 100%;
+    }
+    .comment-box-input-wrapper div:first-child{
+        margin-bottom: 20px;
+    }
+    .comment-tittle{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 21px;
+        font-family: Arial;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(180, 186, 197, 0.4);
+    }
+    .comment-box input{
+        width: 100%;
+    }
+    .comment-box textarea{
+        width: 100%;
+    }
+    ::placeholder{
+        font-size: 14px;
+        line-height: 24px;
+        font-family: Arial;
+    }
+    .blog-post-submit-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .comment-post-btn{
+        font-size: 16px;
+        line-height: 24px;
+        font-family: Arial;
+        font-weight: 700;
+        margin-top: 20px;
+        padding: 15px 10px;
+        border-radius: 8px;
+        filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
+        background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
+        border: 1px solid #2aacc8;
+        cursor: pointer;
+    }
+    .comment-post-btn:hover{
+        color: white;
+    }
 /* ==================================================== Blog Page Css End Here ============================================================ */
 
 /* ==================================================== Contact Page Css Start Here ===================================================== */
@@ -1013,7 +1148,9 @@
     input, textarea{
         border: 1px solid  #b4bac5;
         padding: 5px 10px;
-        font-size: 20px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: Arial;
     }
     textarea{
         width: 100%;
@@ -1183,7 +1320,7 @@
         margin-bottom: 15px;
     }
     .web-design-why-choose-card{
-        background-color: rgb(232, 235, 241);
+        background-color: rgba(232, 235, 241, 0.4);
         border: 1px solid rgba(0, 0, 0, 0.15);
         padding: 20px;
         margin-bottom: 20px;
@@ -1206,6 +1343,9 @@
     .wordpress-design-info > .section-tittle{
         margin-bottom: 0px;
     } 
+    .mobile-app-development-page-wrapper > .detail-page-header{
+        padding-bottom: 0;
+    }
 /* ==================================================== Services Inner Page Css Start Here ============================================ */
 
 
@@ -1401,13 +1541,15 @@
         .about-banner{
             height: 30vh;
         }
+        .value > .section-tittle{
+            margin-bottom: 5px;
+        }
         .value{
             flex-basis: 100%;
-            padding: 0 0 20px 0;
         }
         .who-we-are-wrapper{
-            padding-top: 40px;
-            padding-bottom: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
@@ -1445,10 +1587,10 @@
             margin-right: 5px;
         }
         .tab-img-info-wrapper {
-            width: 47%;
+            width: 47.5%;
             margin-right: 0px;
             height: auto;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         .tab-content-img {
             width: 100%;
@@ -1689,9 +1831,6 @@
         .value{
             flex-basis: 45%;
         }
-        .who-we-are-wrapper{
-            flex-direction: column;
-        }
         .what-we-do-info{
             flex-basis: 70%;
         }
@@ -1705,10 +1844,10 @@
         .services-wrapper{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
         }
         .services-card{
-            flex-basis: 47%;
+            flex-basis: 48%;
         }
         .counting-wrpper{
             flex-wrap: wrap;
@@ -1734,8 +1873,16 @@
             flex-basis: 47%;
 
         }
+        .comment-box-input-wrapper{
+            flex-direction: row;
+        }
+        .comment-box-input-wrapper div:first-child{
+            margin-bottom: 0px;
+        }
+        .comment-box-input-wrapper div{
+            width: 49%;
+        }
         /* ========================================= Blog Page Media Quries End Here ==================================================== */
-
 
         /* ========================================= Contact Page Media Quries Start Here ================================================= */
         .we-here{
@@ -1869,12 +2016,6 @@
         .value{
             flex-basis: 45%;
         }
-        .who-we-are-wrapper{
-            flex-direction: row;
-        }
-        .choose-us{
-            margin-top: 0px;
-        }
         .about-p{
             font-size: 14px;
         }
@@ -1903,6 +2044,9 @@
             line-height: 20px;
 
         }
+        .tab-img-info-wrapper {
+            width: 31.5%;
+        }
         /* ======================================== Portfolio Page Media Quries End Here ================================================= */
 
         /* ======================================== Services Page Media Quries Start Here ================================================= */
@@ -1921,9 +2065,9 @@
         /* ======================================== Services Page Media Quries End Here ================================================= */
 
         /* ======================================== Blog Page Media Quries Start Here =================================================== */
-            .blog-card{
+        .blog-card{
                 flex-basis: 47%;
-            }
+        }
         /* ======================================== Blog Page Media Quries End Here =================================================== */
         
         /* ======================================== Contact Page Media Quries Start Here ==================================================== */
@@ -2091,11 +2235,27 @@
         /* Footer Css End Here */
 
         /* ============================================= About Us Page Media Quries Start Here  =========================================== */
+        .who-we-are-wrapper{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
         .value{
             flex-basis: 22%;
         }
         .team-card{
             width: 90%;
+        }
+        .who-we-are-wrapper{
+            flex-direction: row;
+        }
+        .value{
+            margin-bottom: 20px;
+        }
+        .who-we-info > .about-p, .choose-us > .about-p { 
+            width: 90%;
+        } 
+        .choose-us{
+            margin-top: 0px;
         }
         /* ============================================= About Us Page Media Quries End Here  =========================================== */
 
@@ -2138,15 +2298,16 @@
 
         /* ============================================= Blog Page Media Quries Start Here ======================================== */
         .blog-card{
-            flex-basis: 23%;
+            flex-basis: 23.5%;
         }
         /* ============================================= Blog Page Media Quries End Here ========================================= */
 
-        /* =============================================  Portfolio Page Media Quries Start Here ========================================== */
+        /* ============================================= Portfolio Page Media Quries Start Here ========================================== */
         .tab-img-info-wrapper {
-            width: 23%;
+            width: 23.5%;
+            margin-bottom: 18px;
         }
-        /* =============================================  Portfolio Page Media Quries Start Here ========================================== */
+        /* ============================================= Portfolio Page Media Quries Start Here ========================================== */
 
         /* ============================================= Contact Page Media Quries Start Here ============================================= */
         .contact-info {
@@ -2333,13 +2494,17 @@
             top: 33px;
             right: 5px;
         }
+        
+        .who-we-info > .about-p, .choose-us > .about-p { 
+            width: 85%;
+        } 
         /* =========================================== About Us Page Media Quries End Here ============================================== */
 
         /* =========================================== Services Page Media Quries Start Here ============================================= */
 
         /* =========================================== Services Page Media Quries End Here ============================================= */
-        .services-wrapper{
-            justify-content: space-between;
+        .services-card {
+            flex-basis: 23.5%;
         }
         .count-card {
             flex-basis: 18%;
