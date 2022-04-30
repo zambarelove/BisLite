@@ -6,11 +6,20 @@
         border: none;
     }
     a{
-        color: #000000;
+        color: var(--third-color);
         text-decoration: none;
+    }
+    .read-more:hover .fa-angle-right{
+        color: var(--primary-color);
     }
     .container-fluid{
         width: 100%;
+    }
+    :root{
+        --primary-color:#2aacc8;
+        --secoundry-color: #363636;
+        --third-color: #000000;
+        --forth-color:white;
     }
 /* All Comman Css End Here */
 
@@ -19,6 +28,7 @@
         font-family: Lato;
         src: url("./goggle-font/Lato/Lato-Regular.ttf");
     }
+   
 /* Goggle font End Here */
 
 
@@ -26,7 +36,8 @@
     /* Header Css Start Here */
         header{
             width: 100%;
-            padding: 40px 0;
+            padding-top: 40px;
+            padding-bottom: 40px;
             filter: drop-shadow(0px 2px 2.5px rgba(0,0,0,0.07));
             background-color: #e8ebf1;
             border: 1px solid rgba(0,0,0,0.15);
@@ -41,10 +52,12 @@
             left: 0;
             right: 0;
             transition: all 0.5s;
+            z-index: 9999;
         }
         .container{
             width: 100%;
-            padding: 0px 10px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         .top-header{
             display: flex;
@@ -55,42 +68,52 @@
             display: none;
             list-style: none;
         }
-        .top-nav-link li{   
+        .top-nav-link-li{   
             padding: 10px;
             position: relative;
             cursor: pointer;
+            margin-right: 5px;
             border-top: 5px solid transparent;
         }
         .top-nav-link li a{
             font-size: 13px;
             line-height: 20px;
-            color: #000000;
+            color: var(--third-color);
             font-weight: bold;
             font-family: Arial;
             padding: 10px;
             text-transform: uppercase;
         }
-        .top-nav-link li a:hover{
-            color: #2AACC8;
+        .home-active-li, .about-active-link, .services-active-li, .portfolio-active-li, .blog-active-li, .contact-active-li {
+            border-top: 5px solid var(--primary-color);
         }
         .top-nav-link li:hover{
             background-color: white;
-            padding: 10px;
-            border-top: 5px solid #2AACC8;
+            border-top: 5px solid var(--primary-color);
+        }
+        .top-nav-link-li:hover.top-nav-link-li a:not(.dropdown-a){
+            color: var(--primary-color);
         }
         .dropdown{
             position: relative;
         }
         .dropdown-list{
             width: 215px;
-            background-color: white;
+            background-color: var(--forth-color);
             display: none;
             list-style: none;
             position: absolute;
             top: 22px;
             left: 0;
             right: 0;
-            border-bottom: 5px solid #29ABC7;
+            border-bottom: 5px solid red;
+        }
+        .dropdown-list-li{
+            color: var(--third-color);
+            border-top: 5px solid transparent;
+        }
+        .dropdown-a:hover{
+            color: var(--primary-color);
         }
         .fa-angle-down{
             font-size: 14px;
@@ -99,6 +122,7 @@
         .mobile-icon{
             display: block;
             font-size: 20px;
+            line-height: 30px;
             cursor: pointer;
         }   
         .sidepanel{
@@ -134,9 +158,11 @@
             top: 5px;
             right: 15px;
             font-size: 48px;
+            line-height: normal;
         }    
         .openbtn {
             font-size: 20px;
+            line-height: 30px;
             cursor: pointer;
             color: black;
             padding: 5px 15px;
@@ -162,11 +188,12 @@
             left: 120px;
             width: 260px;
             font-size: 28px;
-            color: white;
+            color: var(--forth-color);
             font-family: Lato;
         }
         .hero-slide-tittle{
             font-size: 28px;
+            line-height: normal;
             color: #ffffff;
             font-weight: 700;
             font-family: Lato;
@@ -178,27 +205,36 @@
             display: flex;
             align-items: center;
         }
-        .title-heading {
-            font-size: 16px;
-            line-height: 21px;
+        .main-tittle{
+            font-size: 15px;
+            line-height: 20px;
+            color: var(--third-color);
             font-family: Arial;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .ml-15-px{
             margin-left: 15px;
         }
-        .secound-container-info p {
-            font-size: 14px;
-            line-height: 21px;
+        .mb-10-px{
+            margin-bottom: 10px;
+        }
+        .home-service-p {
+            font-size: 13px;
+            line-height: 20px;
             font-family: Arial;
-            color: #000000;
-            margin: 10px 0 15px 0;
+            color: var(--secoundry-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
         .read-more{
             font-size: 14px;
             line-height: 21px;
             font-family: Arial;
-            color: #2aacc8;
+            color:var(--primary-color);
         }
         .services-right-arrow{
-            color: #000000;
+            color: var(--third-color);
         }
         .read-more:hover{
             text-decoration: underline;
@@ -209,23 +245,6 @@
             border-bottom: 1px solid #dfe1e5;
             position: relative;
         }
-        .section-header{
-            display: flex;
-            align-items: center;
-            padding: 20px 0;
-        }
-        .section-heading{
-            font-size: 18px;
-            line-height: 21px;
-            color: black;
-            font-weight: bold;
-            font-family: Arial;
-            padding-left: 15px;
-        }
-        .white-container{
-            background-color: white;
-            padding-bottom: 35px;
-        }
         .secound-slider-wrpper{
             display: flex;
             justify-content: space-between;
@@ -233,6 +252,27 @@
             padding-bottom: 15px;
             border-bottom: 1px solid #dfe1e5;
         }
+        .latest-work-slider .slick-prev {
+            position: absolute;
+            top: -55px;
+            right: 35px;
+        }
+        .latest-work-slider .slick-next {
+            position: absolute;
+            top: -55px;
+            right: -5px;
+        }
+        .section-header{
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .white-container{
+            background-color: var(--forth-color);
+            padding-bottom: 35px;
+        }
+       
         .hero-slide-img-wrpper{
             position: relative;
         }
@@ -241,10 +281,6 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .testimonial-client-header{
-            display: flex;
-            align-items: center;
-        }
         .brand-line{
             display: flex;
             flex-direction: row;
@@ -252,7 +288,6 @@
         }
         
         /* Secound Slider css Start Here  */
-       
         .slide{
             position: relative;
         }
@@ -262,7 +297,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            background-color: #2AACC8;
+            background-color: var(--primary-color);
             position: absolute;
             bottom: -50%;
             left:0 ;
@@ -271,44 +306,34 @@
         .slide:hover .slide-hover-info{
            bottom: 0;
         }
-        /* Secound Slider css Start Here  */
-
+        /* Secound Slider css End Here  */
         .brand-line-one{
             display: flex;
         }
         .brand-line-one img{
             width: 210px;
         }
-       
         /* Testimonial and Client Section Start Here */
         .testimonial-client-header{
             display: flex;
             align-items: center;
-            padding: 15px 0;
-        }
-        .testimonial-client-heading{
-            font-size: 18px;
-            line-height: 26px;
-            color: #000000;
-            font-weight: bold;
-            font-family: Arial;
-            text-transform: uppercase;
-            padding-left: 15px;
+            padding-top: 15px;
+            padding-bottom: 10px;
         }
         .testimonial-p{
             width: 100%;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 24px;
-            color: #363636;
+            color: var(--secoundry-color);
             font-family: Arial;
         }
-        
         .reviewer{
-            font-size: 16px;
+            font-size: 14px;
             line-height: 24px;
             font-weight: 600;
             font-family: Arial;
-            margin-top: 20px;
+            margin-top: 10px;
+            color: var(--secoundry-color);
         }
         /* Testimonial and Client Section End Here */
         
@@ -327,7 +352,7 @@
             width: 100%;;
             font-size: 16px;
             line-height: 26px;
-            color: #363636;
+            color: var(--secoundry-color);
             font-family: Arial;
         }
         .download-btn{
@@ -342,7 +367,7 @@
             border-radius: 8px;
             filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
             background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
-            border: 1px solid #2aacc8;
+            border: 1px solid var(--primary-color);
         }
         .download-btn a img{
             margin-right: 15px;
@@ -369,10 +394,9 @@
             padding-top: 20px;
         }
         .footer-text{
-            font-size: 16px;
-            line-height: 24px;
-            color: #363636;
-            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: var(--secoundry-color);
             font-family: Arial;
         }
         .footer-first-line{
@@ -381,26 +405,11 @@
             justify-content: space-between;
             padding-top: 20px;
         }
-        .footer-section-header{
-            font-size: 15px;
-            line-height: 20px;
-            font-weight: 100;
-            text-transform: uppercase;
-            text-align: start;
-            font-family: Arial;
-            padding-bottom: 10px;
-        }
-        .footer-section-heading{
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 21px;
-            font-family: Arial;
-        }
         .footer-about-p{
             font-size: 15px;
             line-height: 20px;
             width: 100%;
-            color: #363636;
+            color: var(--third-color);
         }
         .footer-link{
             list-style: none;
@@ -418,14 +427,14 @@
         address h5{
             font-size: 16px;
             line-height: 24px;
-            color: #363636;
+            color: var(--secoundry-color);
             font-weight: 700;
         }
         .footer-call-fax-div{
             margin-top: 15px;
         }
         .footer-call-fax-div a{
-            color: #363636;
+            color: var(--secoundry-color);
         }
         .footer-call-fax-div a:hover{
             color: #29ABC7;
@@ -443,10 +452,11 @@
         .footer-social-link-a .fa-facebook-f, .fa-share-nodes, .fa-skype, .fa-linkedin-in, .fa-pinterest, .fa-dribbble{
             font-size: 20px;
             padding: 5px 6px;
-            color: white;
+            color: var(--forth-color);
             border-radius: 50%;
-            border: 4px solid white;
+            border: 4px solid var(--forth-color);
             box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+            margin-right: 10px;
         }
         .footer-social-link-a .fa-facebook-f{
             background-color: #3B5998;
@@ -476,7 +486,6 @@
         }
         .social-link-icon:hover{
             background-color: #29ABC7;
-            box-shadow: 0px 2px 10px rgba(0,0,0,0.7);
         }
         .footer-social-link-wrapper{
             display: flex;
@@ -484,11 +493,8 @@
             align-items: center;
             margin-top: 10px;
         }
-        .footer-social-link-wrapper > div{
-            font-size: 15px;
-            margin-right: 10px;
-        }
         .fa-angle-right{
+            color: var(--third-color);
             margin-right: 5px;
         }
         .footer-last-line{
@@ -499,20 +505,19 @@
         }
     /* Footer Css End Here */
         
-/* All Section Css End Here */
+/* ==================================================== Home Page Css End Here  ==================================================== */
 
 /* ==================================================== About Us Page Css Start Her =================================================== */
     .about-banner{
         background-image: url('./images/about-us-page-img/bg.png');
         height: 30vh;
-        background-color: #2AACC8;
+        background-color: var(--primary-color);
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
     }
     .value-wrapper{
-        padding-top: 30px;
-        padding-bottom: 15px;
+        padding-top: 20px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -525,19 +530,11 @@
     .value{
         margin-bottom: 20px;
     }
-    .section-tittle{
-        font-family: Arial;
-        text-transform: uppercase;
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
-    
     .about-p{
         font-family: Arial;
         font-size: 14px;
         line-height: 21px;
+        color: var(--secoundry-color);
     }
     .about-blue-container{
         margin-top: 0;
@@ -552,12 +549,12 @@
         line-height: 24px;
         font-weight: 600;
         font-family: Arial;
-        color: #000;
+        color: var(--third-color);
         cursor: pointer;
         display: inline-block;
         filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
         background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
-        border: 1px solid #2aacc8;
+        border: 1px solid var(--primary-color);
         border-radius: 8px;
         padding: 10px 20px;
         margin-top: 30px;
@@ -573,15 +570,14 @@
         padding: 20px 0;
     }
     .our-team-tittle{
-        padding-bottom: 10px;
+        padding-bottom: 15px;
         border-bottom: 1px solid  #dfe1e5;
     }
-    
     .team-card{
         position: relative;
         cursor: pointer; 
         text-align: center;
-        color: white;
+        color: var(--forth-color);
     }
     .card-member-name{
         font-family: Arial;
@@ -599,7 +595,7 @@
         left: 0px;
         width: 100%;
         height: 50%;
-        background-color: #2aacc8;
+        background-color: var(--primary-color);
         transition: all 0.5s;
         display: flex;
         flex-direction: column;
@@ -609,19 +605,31 @@
     .team-card:hover .team-card-info{
         bottom: 0px;transition: all 0.5s;
     }
-
+    .team-slider .slick-prev{
+        position: absolute;
+        top: -35px;
+        right: 35px;
+    }
+    .team-slider .slick-next{
+        position: absolute;
+        top: -35px;
+        right: 0px;
+    }
 /* ==================================================== About Us Page Css End Her   ======================================================= */
 
 /* ==================================================== Services Page Css Start Here ====================================================== */
-    .services-header > .section-tittle{
+    .services-header {
         padding-bottom: 10px;
+        margin-bottom: 10px;
         border-bottom: 1px solid #dfe1e5;
     }
     .fa-gear, .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users, .fa-blog{
-        color: #2aacc8;
+        color: var(--primary-color);
     }
     .fa-mobile-button, .fa-bullhorn, .fa-wordpress-simple, .fa-users, .fa-blog{
         padding-right: 10px;
+        font-size: 18px;
+        line-height: 27px;
     }
     .services-outer{
         padding-top: 30px;
@@ -655,19 +663,18 @@
     }
     .services-card:hover .services-header, .services-card:hover .services-card-img{
         background-color: rgba(74, 183, 207, 0.4);
-        transform: scale(1.1);overflow: hidden;
+        transform: scale(1.1);
+        overflow: hidden;
     }
-    .services-card-info .section-tittle{
+    .service-page-card-tittle{
         margin-top: 10px;
         margin-bottom: 10px;
-        color: #2aacc8;
-        font-size: 16px;
-        line-height: 24px;
+        color: var(--primary-color);
     }
     .services-page-p{
         font-family: Arial;
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 13px;
+        line-height: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -695,6 +702,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 20px;
     }
     .disscuss-wrapper{
         display: flex;
@@ -708,12 +716,6 @@
     .disscuss-btn-wrapper{
         margin-top: 30px;
     }
-    .discus-info > .section-tittle{
-        font-size: 14px;
-    }
-    .discus-info > .footer-text{
-        font-size: 14px;
-    }
     .discuss-btn{
         font-family: Arial;
         font-size: 16px;
@@ -725,10 +727,10 @@
         border-radius: 8px;
         filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
         background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
-        border: 1px solid #2aacc8;
+        border: 1px solid var(--primary-color);
     }
     .discuss-btn:hover{
-        color: white;
+        color: var(--forth-color);
     }
     .mb{
         margin-bottom: 35px;
@@ -742,9 +744,7 @@
 /* ==================================================== Services Page Css End Here ======================================================== */
 
 /* ==================================================== PortFolio Page Css Start Here ===================================================== */
-    .home-active-li, .portfolio-active-li, .about-active-link, .services-active-li, .blog-active-li, .contact-active-li {
-        border-top: 5px solid #2AACC8 !important;
-    }
+    
     .tab-section-title-wrapper{
         display: flex;
         align-items: center;
@@ -764,7 +764,7 @@
         font-weight: 700;
         margin-right: 0px;
         cursor: pointer;
-        color: #000000;
+        color: var(--third-color);
     }
     .tab-content-img{
         width: 100%;
@@ -813,7 +813,7 @@
     }
     .wrapper{
         width: 100%;
-        background-color: white;
+        background-color: var(--forth-color);
         border-radius: 5px;
     }
     .wrapper header{
@@ -827,7 +827,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-family:  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 14px;
         line-height: 21px;
         position: relative;
@@ -856,20 +855,13 @@
     #icons:checked ~  nav label.icons,
     #logo:checked ~  nav label.tab-logo,
     #graphic:checked ~  nav label.graphic{
-        color: white;
+        color: var(--forth-color);
         background-color: #81E4ED;
         transition: all 0.5s;
     }
     section .content{
         display: none;
     }
-    section .tittle{
-        font-size: 22px;
-        font-weight: 500;
-        margin: 30px 0 10px 0;
-        font-family: arial;
-    }
-    
     #website:checked ~ section .content-2,
     #wordpress:checked ~ section .content-3,
     #mobile-app:checked ~ section .content-4,
@@ -968,13 +960,13 @@
         font-size: 16px;
         line-height: 24px;
         font-family: Arial;
-        color: #2aacc8;
+        color: var(--primary-color);
     }
     .blog-date{
         font-family: Arial;
         font-size: 14px;
         line-height: 21px;
-        color: #2aacc8;
+        color: var(--primary-color);
     }
     .blog-card-info p{
         font-size: 14px;
@@ -1024,7 +1016,7 @@
     }
     .blog-writter-name{
         font-family: Arial;
-        color: #363636;
+        color: var(--secoundry-color);
         font-size: 14px;
         line-height: 21px;
     }
@@ -1035,7 +1027,7 @@
         font-family: Arial;
         font-size: 14px;
         line-height: 21px;
-        color: #363636;
+        color: var(--secoundry-color);
         margin-bottom: 10px;
     }
     .blog-page-question-wrapper{
@@ -1092,7 +1084,7 @@
         border-radius: 8px;
         filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
         background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
-        border: 1px solid #2aacc8;
+        border: 1px solid var(--primary-color);
         cursor: pointer;
     }
     .comment-post-btn:hover{
@@ -1103,7 +1095,7 @@
 /* ==================================================== Contact Page Css Start Here ===================================================== */
    
     .contact-outer{
-        background-color: white;
+        background-color: var(--forth-color);
         padding: 30px 0;
     }
     .contact-header{
@@ -1112,20 +1104,15 @@
         padding-bottom: 10px;
         border-bottom: 1px solid #dfe1e5;
     }
-    .contact-heading{
-        font-size: 16px;
-        line-height: 27px;
-        color: #000000;
-        font-weight: bold;
-        font-family: Arial;
-        margin-left: 10px;
-        text-transform: uppercase;
-    }
     .contact-body{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 30px;
+    }
+    .ml-10{
+        margin-left: 10px;
+        margin-top: -2px;
     }
     form{
         width: 100%;
@@ -1158,13 +1145,13 @@
         border-radius: 8px;
         filter: drop-shadow(0px 2px 1.5px rgba(0,0,0,0.2));
         background-image: linear-gradient(0deg, #29abc7 0%, #5fcddd 15%, #71d9e5 50%, #81e3ed 100%);
-        border: 1px solid #2aacc8;
+        border: 1px solid var(--primary-color);
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: Arial;
         font-size: 16px;
-        line-height: 21;
+        line-height: 24px;
         font-weight: bold;
         text-transform: uppercase;
         margin-top: 15px;
@@ -1182,13 +1169,13 @@
         font-family: Arial;
         font-size: 14px;
         line-height: 21px;
-        color: #000000;
+        color: var(--third-color);
     }
     .thank-you{
         font-size: 14px;
         line-height: 21px;
         font-family: Arial;
-        color: #000000;
+        color: var(--third-color);
         margin-bottom: 10px;
         font-weight: normal;
         width: 100%;
@@ -1197,10 +1184,10 @@
         font-size: 14px;
         line-height: 21px;
         font-family: Arial;
-        color: #000000;
+        color: var(--third-color);
     }
     .mail-us{
-        color: #2AACC8;
+        color: var(--primary-color);
     }
     iframe{
         width: 100%;
@@ -1233,13 +1220,13 @@
         text-transform: uppercase;
     }
     .company-name{
-        font-size: 16px;
-        line-height: 21px;
+        font-size: 15px;
+        line-height: 20px;
         font-family: Arial;
         margin-top: 15px;
     }
     .office{
-        color: #363636;
+        color: var(--secoundry-color);
         font-family: Arial;
         font-size: 16px;
         line-height: 21px;
@@ -1249,7 +1236,7 @@
     }
     .call, .fax, .number{
         font-family: Arial;
-        color: #363636;
+        color: var(--secoundry-color);
         font-size: 15px;
         line-height: 21px;
     }
@@ -1282,16 +1269,11 @@
     .detail-page-tittle{
         padding-left: 15px;
     }
-    .web-design-page-question{
-        font-family: Arial;
-        font-size: 16px;
-        line-height: 24px;
-    }
     .question-answer{
         font-family: Arial;
         font-size: 14px;
-        line-height: 22px;
-        color: #363636;
+        line-height: 21px;
+        color: var(--secoundry-color);
         margin-bottom: 15px;
     }
     .service-ol{
@@ -1299,49 +1281,39 @@
         padding-top: 15px;
     }
     .service-ol li{
-        margin-bottom: 10px;
-        color: #363636;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 21px;
         font-family: Arial;
+        margin-bottom: 7px;
+        color: var(--secoundry-color);
     }
     .web-design-header{
         display: flex;
     }
-   
     .web-design-why-choose-wrpper{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-top: 15px;
     }
     .web-design-why-choose-card{
         background-color: rgba(232, 235, 241, 0.4);
         border: 1px solid rgba(0, 0, 0, 0.15);
         padding: 20px;
-        margin-bottom: 20px;
         flex-basis: 100%;
+        margin-bottom: 15px;
     }
-    .web-design-why-choose-tittle{
-        font-size: 16px;
-        line-height: 21px;
-        font-family: Arial;
-        text-transform: uppercase;
-    }
-    .web-design-why-choose-p{
-        font-family: Arial;
-        font-size: 14px;
-        line-height: 24px;
-        color: #363636;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .wordpress-design-info > .section-tittle{
+    .web-design-why-choose-card .question-answer:last-child{
         margin-bottom: 0px;
-    } 
+    }
     .mobile-app-development-page-wrapper > .detail-page-header{
         padding-bottom: 0;
+    }
+    .web-design-info .main-tittle,
+    .wrodpress-info .main-tittle , 
+    .mobile-app-info .main-tittle,
+    .internet-marketting-info .main-tittle{
+        text-transform: capitalize;
     }
 /* ==================================================== Services Inner Page Css Start Here ============================================ */
 
@@ -1393,58 +1365,17 @@
             align-items: center;
             flex-wrap: nowrap;
         }
-        .title-heading{
-            font-size: 16px;
-            line-height: 21px;
-        }
-        .secound-container-info p {
-            margin: 5px 0 10px 0;
-            font-size: 14px;
-            line-height: 21px;
-        }
         .resposive-design, .full-psd, .coding{
             margin-top: 35px;
         }  
         /* Services Container Css Start Here */
 
         /* Latest Container Css Start Here */
-        .section-heading, .testimonial-client-heading, .testimonial-client-heading{
-            font-size: 18px;
-            line-height: 27px;
-        }
-        .testimonial-p {
-            font-size: 14px;
-            line-height: 21px;
-        }
-        .reviewer{
-            font-size: 14px;
-            line-height: 21px;   
-        }
         .brand-line-one{
             display: flex;
             flex-direction: column;
         }
-        .latest-work-slider .slick-prev {
-            position: absolute;
-            top: -23%;
-            left: 75%;
-        }
-        .latest-work-slider .slick-next {
-            position: absolute;
-            top: -20%;
-            left: 90%;
-        }
-        .team-slider .slick-prev{
-            position: absolute;
-            top: -34px;
-            left: auto;
-            right: 40px;
-        }
-        .team-slider .slick-next{
-            position: absolute;
-            top: -34px;
-            right: 0px;
-        }
+        
         .slider-img {
             width: 100%;
             cursor: pointer;
@@ -1483,10 +1414,6 @@
         .download-btn img{
             margin-right: 10px;
         }
-        .blue-paragraph {
-            font-size: 16px;
-            line-height: 26px;
-        }
         /* Latest Work Container Css End Here */
 
         /* Footer Media Quries Start Here */
@@ -1503,7 +1430,10 @@
         }
         .copywrite-p{
             margin-top: 10px;
-            font-size: 12px;
+            font-size: 13px;
+            line-height: 18px;
+            font-family: Arial;
+            color: var(--secoundry-color);
         }
         .social-link-heading {
             margin-left: 0px;
@@ -1538,7 +1468,7 @@
         .about-banner{
             height: 30vh;
         }
-        .value > .section-tittle{
+        .value > .main-tittle{
             margin-bottom: 5px;
         }
         .value{
@@ -1566,13 +1496,11 @@
             align-items: center;
         }
         .team-card{
-            width: 95% !important;
+            width: 95% ;
         }
         /* =========================================== About Us Page Media Quries End Here ============================================== */
 
-
         /* =========================================== PortFolio Page Media Quries Start Here ============================================= */
-
         .tab-section-title-wrapper {
             margin-top: 20px;
             margin-bottom: 10px;
@@ -1598,7 +1526,7 @@
         }
         /* ===========================================  Portfolio Page Media Quries End Here =============================================== */
 
-        /* Contact Page Media Quries Start Here */
+        /* =========================================== Contact Page Media Quries Start Here ================================================ */
         .contact-info {
             flex-basis: 100%;
             margin-bottom: 25px;
@@ -1626,7 +1554,7 @@
             height: 45px;
             cursor: pointer;
         }
-        /* Contact Page Media Quries End Here */
+        /* ============================================ Contact Page Media Quries End Here ================================================ */
     }
     
     @media screen and (min-width:576px){
@@ -1691,24 +1619,6 @@
         .hero-slide-tittle{
             font-size: 34px;
         }
-        .latest-work-slider .slick-prev {
-            top: -27%;
-            left: 87%;
-        }
-        .latest-work-slider .slick-next {
-            top: -24%;
-            left: 95%;
-        }
-        .team-slider .slick-prev{
-            position: absolute;
-            top: -34px;
-            left: auto;
-        }
-        .team-slider .slick-next{
-            position: absolute;
-            top: -35px ;
-            right: 0px;
-        }
         .slider-img {
             width: 260px;
             cursor: pointer;
@@ -1725,11 +1635,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .title-heading {
-            font-size: 15px;
-            line-height: 20px;
-        }
-        .secound-container-info p {
+        .home-service-p {
             font-size: 13px;
             line-height: 20px;
         }
@@ -1837,14 +1743,13 @@
         /* ========================================= About Page Media Quries Start Here ================================================ */
 
         /* ========================================= Services Page Media Quries Start Here ================================================ */
-
         .services-wrapper{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
         .services-card{
-            flex-basis: 48%;
+            flex-basis: 48.5%;
         }
         .counting-wrpper{
             flex-wrap: wrap;
@@ -1868,7 +1773,6 @@
         /* ========================================= Blog Page Media Quries Start Here ====================================================== */
         .blog-card{
             flex-basis: 47%;
-
         }
         .comment-box-input-wrapper{
             flex-direction: row;
@@ -1910,7 +1814,6 @@
         .hero-slide-tittle{
             font-size: 38px;
         }
-          
         .top-nav-link{
             display: flex;
             align-items: center;
@@ -1937,24 +1840,6 @@
         .flex-item{
             width: 325px;
         }
-        .latest-work-slider .slick-prev {
-            top: -32%;
-            left: 91%;
-        }
-        .latest-work-slider .slick-next {
-            top: -28%;
-            left: 97%;
-        }
-        .team-slider .slick-prev{
-            position: absolute;
-            top: -34px;
-            left: 640px;
-        }
-        .team-slider .slick-next{
-            position: absolute;
-            top: -34px ;
-            right: 0px;
-        }
         .slider-img{
             width: 210px;
         }
@@ -1968,6 +1853,9 @@
         }
         .testimonial-p{
             width: 100%;
+        }
+        .reviewer{
+            margin-top: 20px;
         }
         .finder-outer{
             margin-top: 0px;
@@ -1998,7 +1886,6 @@
             margin-top: 25px;
         }
         .copywrite-p{
-            font-size: 13px;
             width: 100%;
         }
         .footer-nav-link-li{
@@ -2012,9 +1899,6 @@
         }
         .value{
             flex-basis: 45%;
-        }
-        .about-p{
-            font-size: 14px;
         }
         .what-we-do{
             flex-direction: row;
@@ -2047,12 +1931,6 @@
         /* ======================================== Portfolio Page Media Quries End Here ================================================= */
 
         /* ======================================== Services Page Media Quries Start Here ================================================= */
-        .services-card{
-            flex-basis: 47%;
-        }
-        .discus-info > .section-tittle{
-            font-size: 16px;
-        }
         .count-card {
             flex-basis: 20%;
         }
@@ -2128,6 +2006,9 @@
         .flex-item{
             width: 410px;
         }
+        .testimonial-client-header{
+            padding-bottom: 18px;
+        }
         .testimonial-p{
             width: 400px;
         }
@@ -2135,26 +2016,6 @@
             margin-top: 0;
         }
         /* Latest Work Container Start Here */
-        .latest-work-slider .slick-prev {
-            position: absolute;
-            top: -32%;
-            left: 93%;
-        }
-        .latest-work-slider .slick-next {
-            position: absolute;
-            top: -28%;
-            left: 98%;
-        }
-        .team-slider .slick-prev{
-            position: absolute;
-            top: -34px;
-            left: 850px;
-        }
-        .team-slider .slick-next{
-            position: absolute;
-            top: -34px;
-            right: 0px;
-        }
         .slider-img{
             width: 210px;
         }
@@ -2276,10 +2137,11 @@
             margin-top: 0;
         }
         .web-design-why-choose-card{
-            flex-basis: 32%;
+            flex-basis: 32.5%;
         }
         .service-ol{
             padding-left: 40px;
+            margin-bottom: 25px;
         }
         .wordpress-why-choose-tittle{
             text-align: center;
@@ -2367,36 +2229,17 @@
             width: 203px;
         }
         .testimonial-p {
-            font-size: 14px;
-            line-height: 24px;
+            width: 441px;
+        }
+        .blue-paragraph{
+            width: 613px;
         }
         /* Secound gray container start here */
-        .latest-work-slider .slick-prev {
-            position: absolute;
-            top: -21%;
-            left: 96%;
-        }
-        .latest-work-slider .slick-next {
-            position: absolute;
-            top: -18%;
-            left: 99%;
-        }
-        .team-slider .slick-prev{
-            position: absolute;
-            top: -77px;
-            left: 1150px;
-        }
-        .team-slider .slick-next{
-            position: absolute;
-            top: -65px;
-            right: 0px;
-        }
-        .title .title-heading{
+        .title-heading{
             font-size: 15px;
             line-height: 20px;
-
         }
-        .secound-container-info p {
+        .home-service-p {
             font-size: 13px;
             line-height: 20px;
             margin-bottom: 15px;
@@ -2418,18 +2261,14 @@
         .secound-container-info .secound-container-info-a{
             margin-top: 15px;
         }
-        .section-heading{
-            padding-left: 15px;
-        }
         .section-header{
             padding: 18px 0;
         }
         .secound-slider-wrpper{
-            display: flex;
-            justify-content: space-between;
             padding-top: 20px;
             padding-bottom: 34px;
             border-bottom: 1px solid #dfe1e5;
+            position: relative;
         }
         .slider-img{
             width: 275px;
@@ -2438,14 +2277,8 @@
         .slide-hover-info{
             width: 90.2%;
         }
-        .testimonial-p{
-            width: 441px;
-        }
         .brand-line-one img, .brand-line-two img {
             width: 210px;
-        }
-        .blue-paragraph{
-            width: 613px;
         }
         .finder-outer{
             margin-top: 0px;
@@ -2482,31 +2315,20 @@
         .team-card{
             width: 90%;
         }
-        .team-slider .slick-prev:before{
-            position: absolute;
-            top: 45px;
-            right: 0px;
-        }
-        .team-slider .slick-next:before{
-            position: absolute;
-            top: 33px;
-            right: 5px;
-        }
-        
         .who-we-info > .about-p, .choose-us > .about-p { 
             width: 85%;
         } 
         /* =========================================== About Us Page Media Quries End Here ============================================== */
 
         /* =========================================== Services Page Media Quries Start Here ============================================= */
-
-        /* =========================================== Services Page Media Quries End Here ============================================= */
         .services-card {
             flex-basis: 23.5%;
         }
         .count-card {
             flex-basis: 18%;
         }
+        /* =========================================== Services Page Media Quries End Here ============================================= */
+
         /* =========================================== Portfolio Page Media Quries Start Here ============================================== */
         .tab-link-ul li{
             padding: 5px 15px;
@@ -2516,7 +2338,6 @@
             font-size: 14px;
         }
         /* =========================================== Portfolio Page Media Quries End Here ============================================= */
-
 
         /* ========================================== Contact Page Media Quries Start Here  ============================================== */
         .contact-info {
@@ -2556,16 +2377,7 @@
         .slide-hover-info{
             width: 87.5%;
         }
-        .team-slider .slick-prev:before{
-            position: absolute;
-            top: 45px;
-            right: -30px;
-        }
-        .team-slider .slick-next:before{
-            position: absolute;
-            top: 33px;
-            right: 5px;
-        }
+        
     }
 
 /* All Device Media Quries End Here */
